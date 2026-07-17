@@ -1,0 +1,37 @@
+{
+  "name": "com.rlmg.toolscore",
+  "displayName": "RLMG Tools - Core",
+  "version": "0.1.0",
+  "unity": "6000.3",
+  "unityRelease": "13f1",
+  "description": "A set of Monobehaviours and static Utility classes for Rollmuggers to use for essential app management Unity.",
+  "dependencies": {
+    "com.unity.test-framework": "1.6.0"
+  },
+  "author": {
+    "name": "RLMG",
+    "url": "http://www.rlmg.com",
+    "email": "josh@rlmg.com"
+  },
+  "changelogUrl": "https://example.com/changelog.html",
+  "documentationUrl": "https://example.com/",
+  "licensesUrl": "https://example.com/licensing.html",
+  "samples": [
+    {
+      "displayName": "Common Example Assets",
+      "description": "Shared assets necessary for most examples.",
+      "path": "Samples~/Common Example Assets"
+    },
+    {
+      "displayName": "Attract Video Player Example",
+      "description": "Demonstrates use of AttractVideoPlayer to play a dismissable attract video.",
+      "path": "Samples~/Attract Video Player Example"
+    },
+    {
+      "displayName": "RLMG Config Loader Example",
+      "description": "Demonstrates use of RLMGConfigLoader, an RLMG-standards component for configuring logging, displays, and attract states.",
+      "path": "Samples~/RLMG Config Loader Example"
+    }
+  ]
+
+}
