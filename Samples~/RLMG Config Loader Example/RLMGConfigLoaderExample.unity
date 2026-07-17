@@ -341,9 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77816083206fde24c86f02298e379d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RLMG.Tools_core::rlmg.Tools.Core.AppManager
-  doSetResolution: 0
   displaysData: []
-  doDebugLog: 0
+  doDebugLogSetup: 0
+  vSyncCount: 1
+  targetFrameRate: 60
 --- !u!4 &357045418
 Transform:
   m_ObjectHideFlags: 0
@@ -624,7 +625,7 @@ MonoBehaviour:
   DoLoadLocalContentOnly: 0
   contentFileName: config.json
   contentLocationRoot: 0
-  ContentDirName: RLMGExternalData
+  ContentDirName: RLMG Core Examples Assets
   DidLoadSucceed: 0
   AllLoadingStarting:
     m_PersistentCalls:
@@ -642,18 +643,16 @@ MonoBehaviour:
   attractVideoPlayer: {fileID: 0}
   attractTimeouts: []
   Data:
-    displays: []
+    appManagerConfig:
+      displaysData: []
     attractPath: 
     attractTimeoutDuration: 60
-    logLevel: 
-    logLocation: 
-    logFolderName: Exhibit Logs
-    logFileName: exhibit_log
-    logMaxDays: 30
-    doLogFilePerSession: 0
-    doLogDebugLogs: 0
-    debugLogLevel: log
-    doLogDebugStackTrace: 0
+    loggerConfig:
+      logLevel: 
+      logLocation: 
+      logFolderName: 
+      logFileName: 
+      debugLogLevel: 
 --- !u!1 &1026293350
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,19 +960,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97126988d3bac164f94902a3a50d5ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RLMG.Tools_core::rlmg.Tools.Core.RLMGLogger
-  destPath: 2
-  logFolderName: 
-  logFileName: 
+  destPath: 1
+  logFolderName: Exhibit Logs
+  logFileName: exhibit_log
   logDelimiter: 0
   headerLine: Timestamp, Type, Message, Stack Trace
   timestampFormat: yyyy/MM/dd HH:mm:ss
   verbosity: 0
   doLogToDiskInEditor: 0
-  maxDays: 35
-  doLogFilePerSession: 1
-  doLogDebugLogs: 1
+  maxDays: 30
+  doLogFilePerSession: 0
+  doLogDebugLogs: 0
   debugLogVerbosity: 0
-  doLogDebugStackTrace: 1
+  doLogDebugStackTrace: 0
 --- !u!4 &1541927693
 Transform:
   m_ObjectHideFlags: 0

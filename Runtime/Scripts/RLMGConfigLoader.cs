@@ -4,6 +4,7 @@ namespace rlmg.Tools.Core
     using System.Collections;
     using UnityEngine;
     using UnityEngine.Networking;
+    using Newtonsoft.Json;
 
     [DefaultExecutionOrder(-100)]
     public class RLMGConfigLoader : ContentLoader
@@ -42,29 +43,19 @@ namespace rlmg.Tools.Core
         /// <returns></returns>
         protected override IEnumerator OnLocalSuccess(UnityWebRequest webRequest)
         {
-            Data = JsonUtility.FromJson<RLMGConfigData>(webRequest.downloadHandler.text);
+            // Using Newtonsoft to support nullable types
+            Data = JsonConvert.DeserializeObject<RLMGConfigData>(webRequest.downloadHandler.text);
 
             if (Data == null)
                 yield break;
 
-            RLMGLogger.Instance.Configure(
-                Data.LogLevel,
-                Data.LogLocation,
-                Data.logFolderName,
-                Data.logFileName,
-                Data.logMaxDays,
-                Data.doLogFilePerSession,
-                Data.doLogDebugLogs,
-                Data.DebugLogLevel,
-                Data.doLogDebugStackTrace);
+            if (Data.loggerConfig != null)
+                RLMGLogger.Instance.Configure(Data.loggerConfig);
 
             if (appManager != null &&
-                Data.displays != null &&
-                Data.displays.Length > 0)
+                Data.appManagerConfig != null)
             {
-                appManager.Configure(
-                    doResetResolution: true,
-                    displays: Data.displays);
+                appManager.Configure(Data.appManagerConfig);
             }
 
             if (attractVideoPlayer != null &&

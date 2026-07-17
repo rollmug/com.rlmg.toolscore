@@ -2,6 +2,7 @@ namespace rlmg.Tools.Core
 {
     using System;
     using System.IO;
+    using System.Text.RegularExpressions;
     using UnityEngine;
 
     // 
@@ -25,6 +26,164 @@ namespace rlmg.Tools.Core
     {
         ERROR,
         INFO
+    }
+
+    [Serializable]
+    public class RLMGLoggerConfigurationData
+    {
+        /// <summary>
+        /// The log level specified as a string (e.g. "error", "warning", "info")
+        /// used when configuring which messages should be written to disk.
+        /// </summary>
+        [Tooltip("String name of the minimum log level to write to disk (e.g. 'error', 'warning', 'info').")]
+        public string logLevel;
+
+        /// <summary>
+        /// Textual name of the destination location for log files. This can be
+        /// mapped to a LogDestinationPath by the loader (e.g. "desktop").
+        /// </summary>
+        [Tooltip("Textual destination for log files (desktop, application, streamingassets).")]
+        public string logLocation;
+
+        /// <summary>
+        /// Optional explicit UnityEngine.LogType used to control verbosity. When
+        /// set this overrides the string-based logLevel.
+        /// </summary>
+        [Tooltip("Optional explicit Unity LogType to control which messages are written.")]
+        public LogType? verbosity;
+
+        /// <summary>
+        /// Optional explicit destination enum that overrides the string-based
+        /// logLocation value when present.
+        /// </summary>
+        [Tooltip("Optional explicit destination enum for log files.")]
+        public LogDestinationPath? logDestinationPath;
+
+        /// <summary>
+        /// Folder name used when creating the log directory. If not provided a
+        /// default folder name is used by the logger.
+        /// </summary>
+        [Tooltip("Folder name under the chosen destination where logs will be stored.")]
+        public string logFolderName;
+
+        /// <summary>
+        /// Base file name (without extension) for the generated log files.
+        /// </summary>
+        [Tooltip("Base file name for log files (extension will be appended automatically).")]
+        public string logFileName;
+
+        /// <summary>
+        /// Maximum number of days to keep log files before purging. 0 means
+        /// never delete old log files.
+        /// </summary>
+        [Tooltip("Max days to retain log files before deletion. 0 = never delete.")]
+        public int? maxDays;
+
+        /// <summary>
+        /// Whether the logger should create a new file for each application
+        /// session instead of appending to an existing file.
+        /// </summary>
+        [Tooltip("Create a new log file per application session when true.")]
+        public bool? doLogFilePerSession;
+
+        /// <summary>
+        /// Whether to capture messages coming from Debug.unityLogger and write
+        /// them to disk as well as to the Unity console.
+        /// </summary>
+        [Tooltip("Capture and write to disk messages emitted through Debug.unityLogger.")]
+        public bool? doLogDebugLogs;
+
+        /// <summary>
+        /// String-based verbosity used specifically for Debug.unityLogger
+        /// messages. This will be mapped to a LogType when applied.
+        /// </summary>
+        [Tooltip("Minimum log level (string) for Debug.unityLogger messages to be captured.")]
+        public string debugLogLevel;
+
+        /// <summary>
+        /// Optional explicit LogType to use for filtering Debug.unityLogger
+        /// messages (overrides debugLogLevel string when present).
+        /// </summary>
+        [Tooltip("Optional explicit Unity LogType to filter Debug.unityLogger messages.")]
+        public LogType? debugLogVerbosity;
+
+        /// <summary>
+        /// When true, include stack traces when writing Debug.unityLogger
+        /// messages to disk.
+        /// </summary>
+        [Tooltip("Include stack traces when persisting Debug.unityLogger messages.")]
+        public bool? doLogDebugStackTrace;
+
+        /// <summary>
+        /// Computed property that converts the string-based logLevel into the
+        /// corresponding UnityEngine.LogType. Returns null if not parseable.
+        /// </summary>
+        public LogType? LogLevel => GetLogType(logLevel);
+
+        /// <summary>
+        /// Computed property that converts the string-based logLocation into the
+        /// corresponding LogDestinationPath enum. Returns null if not parseable.
+        /// </summary>
+        public LogDestinationPath? LogLocation => GetLogDestinationPath(logLocation);
+
+        /// <summary>
+        /// Computed property that converts the string-based debugLogLevel into
+        /// the corresponding UnityEngine.LogType. Returns null if not parseable.
+        /// </summary>
+        public LogType? DebugLogLevel => GetLogType(debugLogLevel);
+
+        public LogType? GetLogType(string logtype)
+        {
+            if (logtype == null)
+                return null;
+
+            logtype = logtype.ToLowerInvariant();
+            logtype = Regex.Replace(logtype, @"\s+", string.Empty);
+
+            switch (logtype)
+            {
+                case "error":
+                case "fatal":
+                    return LogType.Error;
+                case "assert":
+                    return LogType.Assert;
+                case "warning":
+                case "warn":
+                    return LogType.Warning;
+                case "log":
+                case "debug":
+                case "info":
+                    return LogType.Log;
+                case "exception":
+                case "verbose":
+                case "trace":
+                case "all":
+                    return LogType.Exception;
+            }
+
+            return null;
+        }
+
+        public LogDestinationPath? GetLogDestinationPath(string locationName)
+        {
+            if (locationName == null)
+                return null;
+
+            locationName = locationName.ToLowerInvariant();
+            locationName = Regex.Replace(locationName, @"\s+", string.Empty);
+
+            switch (locationName)
+            {
+                case "desktop":
+                    return LogDestinationPath.Desktop;
+                case "application":
+                    return LogDestinationPath.Application;
+                case "streamingassets":
+                    return LogDestinationPath.StreamingAssets;
+            }
+
+            return null;
+        }
     }
 
     /// <summary>
@@ -130,27 +289,46 @@ namespace rlmg.Tools.Core
             Application.logMessageReceived -= HandleDebugLog;
         }
 
-        public virtual void Configure(
-            LogType _verbosity,
-            LogDestinationPath _logDestinationPath,
-            string _logFolderName,
-            string _logFileName,
-            int _maxDays,
-            bool _doLogFilePerSession,
-            bool _doLogDebugLogs,
-            LogType _debugLogVerbosity,
-            bool _doLogDebugStackTrace
-            )
+        public virtual void Configure(RLMGLoggerConfigurationData data)
         {
-            verbosity = _verbosity;
-            destPath = _logDestinationPath;
-            logFolderName = _logFolderName;
-            logFileName = _logFileName;
-            maxDays = _maxDays;
-            doLogFilePerSession = _doLogFilePerSession;
-            doLogDebugLogs = _doLogDebugLogs;
-            debugLogVerbosity = _debugLogVerbosity;
-            doLogDebugStackTrace = _doLogDebugStackTrace;
+            if (data == null)
+                return;
+
+            if (data.verbosity != null)
+                verbosity = (LogType)data.verbosity;
+
+            if (data.logLevel != null)
+                verbosity = (LogType)data.LogLevel;
+
+            if (data.logDestinationPath != null)
+                destPath = (LogDestinationPath)data.logDestinationPath;
+
+            if (data.logLocation != null)
+                destPath = (LogDestinationPath)data.LogLocation;
+
+            if (data.logFolderName != null)
+                logFolderName = data.logFolderName;
+
+            if (data.logFileName != null)
+                logFileName = data.logFileName;
+
+            if (data.maxDays != null)
+                maxDays = (int)data.maxDays;
+
+            if (data.doLogFilePerSession != null)
+                doLogFilePerSession = (bool)data.doLogFilePerSession;
+
+            if (data.doLogDebugLogs != null)
+                doLogDebugLogs = (bool)data.doLogDebugLogs;
+
+            if (data.debugLogVerbosity != null)
+                debugLogVerbosity = (LogType)data.debugLogVerbosity;
+
+            if (data.debugLogLevel != null)
+                debugLogVerbosity = (LogType)data.DebugLogLevel;
+
+            if (data.doLogDebugStackTrace != null)
+                doLogDebugStackTrace = (bool)data.doLogDebugStackTrace;
         }
 
         protected virtual void Setup()
@@ -237,6 +415,9 @@ namespace rlmg.Tools.Core
             {
                 path = Application.streamingAssetsPath;
             }
+
+            if (string.IsNullOrEmpty(logFolderName))
+                logFolderName = "Exhibit Logs";
 
             logFolderPath = Path.Combine(path, logFolderName);
         }

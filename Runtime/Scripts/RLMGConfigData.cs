@@ -6,84 +6,40 @@ namespace rlmg.Tools.Core
     [Serializable]
     public class RLMGConfigData
     {
-        public DisplayData[] displays;
 
+        /// <summary>
+        /// Configuration data for the AppManager component. When present this
+        /// data will be used to override values set in the AppManager inspector.
+        /// </summary>
+        [Tooltip("Configuration overrides for the AppManager (display, vsync, frame rate).")]
+        public AppManagerConfigurationData appManagerConfig;
+
+        /// <summary>
+        /// Optional path (relative or absolute) to the attract content (e.g. video)
+        /// that should be used when the app is idle.
+        /// </summary>
+        [Tooltip("Path to attract/idle content to play when the app is inactive.")]
         public string attractPath;
 
         /// <summary>
         /// In seconds, the duration of no user input after which
-        /// the AttractTimeout component(s) will time out.
+        /// the AttractTimeout component(s) will time out and the attract content
+        /// (if configured) will be shown.
         /// </summary>
+        [Tooltip("Seconds of inactivity before attract mode activates.")]
         public int attractTimeoutDuration = 60;
 
         // todo - scroll sensitivity?
         // todo - touch sensitivity?
 
-        public string logLevel = "log";
+        /// <summary>
+        /// Configuration settings for the RLMGLogger. When present these values
+        /// will be applied to the logger at runtime.
+        /// </summary>
+        [Tooltip("Logger configuration used to initialize the RLMGLogger at startup.")]
+        public RLMGLoggerConfigurationData loggerConfig;
 
-        public string logLocation = "application";
-
-        public string logFolderName = "Exhibit Logs";
-
-        public string logFileName = "exhibit_log";
-
-        public int logMaxDays = 30;
-
-        public bool doLogFilePerSession = false;
-
-        public bool doLogDebugLogs = false;
-
-        public string debugLogLevel = "log";
-
-        public bool doLogDebugStackTrace = false;
-
-        public LogType LogLevel => GetLogType(logLevel);
-
-        public LogDestinationPath LogLocation
-        {
-            get
-            {
-                switch (logLocation.ToLower())
-                {
-                    case "desktop":
-                        return LogDestinationPath.Desktop;
-                    case "application":
-                        return LogDestinationPath.Application;
-                    case "streamingassets":
-                        return LogDestinationPath.StreamingAssets;
-                }
-
-                return LogDestinationPath.Application;
-            }
-        }
-
-        public LogType DebugLogLevel => GetLogType(debugLogLevel);
-
-        public LogType GetLogType(string logtype)
-        {
-            switch (logtype.ToLower())
-            {
-                case "error":
-                case "fatal":
-                    return LogType.Error;
-                case "assert":
-                    return LogType.Assert;
-                case "warning":
-                case "warn":
-                    return LogType.Warning;
-                case "log":
-                case "debug":
-                case "info":
-                    return LogType.Log;
-                case "exception":
-                case "verbose":
-                case "trace":
-                case "all":
-                    return LogType.Exception;
-            }
-
-            return LogType.Log;
-        }
+        
     }
 
 }

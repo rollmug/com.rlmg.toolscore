@@ -6,7 +6,11 @@
   "unityRelease": "13f1",
   "description": "A set of Monobehaviours and static Utility classes for Rollmuggers to use for essential app management Unity.",
   "dependencies": {
-    "com.unity.test-framework": "1.6.0"
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.rlmg.toolscontentloading": "0.2.1",
+    "com.rlmg.toolsmediaplayers": "0.1.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
   },
   "author": {
     "name": "RLMG",
@@ -24,14 +28,13 @@
     },
     {
       "displayName": "Attract Video Player Example",
-      "description": "Demonstrates use of AttractVideoPlayer to play a dismissable attract video.",
+      "description": "Demonstrates use of the AttractVideoPlayer prefab, which manages the playback, visibility, and raycast blocking of a video on a RawImage, dismissable with any user input.",
       "path": "Samples~/Attract Video Player Example"
     },
     {
       "displayName": "RLMG Config Loader Example",
-      "description": "Demonstrates use of RLMGConfigLoader, an RLMG-standards component for configuring logging, displays, and attract states.",
+      "description": "Demonstrates the use of RLMGConfigLoader to configure all the other components in RLMG Core at runtime, including the logger, attract video player, and app manager.",
       "path": "Samples~/RLMG Config Loader Example"
     }
   ]
-
 }
