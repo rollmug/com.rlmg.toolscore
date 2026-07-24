@@ -7,6 +7,9 @@ namespace rlmg.Tools.Core
     using System.Text.RegularExpressions;
     using UnityEngine;
 
+    /// <summary>
+    /// Where the log files' main log folder will be located
+    /// </summary>
     public enum LogDestinationPath
     {
         Desktop,
@@ -14,6 +17,9 @@ namespace rlmg.Tools.Core
         StreamingAssets
     }
 
+    /// <summary>
+    /// How values should be separated in log files; determines file type.
+    /// </summary>
     public enum LogDelimiter
     {
         Comma,
@@ -48,8 +54,8 @@ namespace rlmg.Tools.Core
         public string logLocation;
 
         /// <summary>
-        /// Optional explicit UnityEngine.LogType used to control verbosity. When
-        /// set this overrides the string-based logLevel.
+        /// Optional explicit <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> used to control verbosity.
+        /// When set this overrides the string-based logLevel.
         /// </summary>
         [Tooltip("Optional explicit Unity LogType to control which messages are written.")]
         public LogType? verbosity;
@@ -97,13 +103,13 @@ namespace rlmg.Tools.Core
 
         /// <summary>
         /// String-based verbosity used specifically for Debug.unityLogger
-        /// messages. This will be mapped to a LogType when applied.
+        /// messages. This will be mapped to a <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> when applied.
         /// </summary>
         [Tooltip("Minimum log level (string) for Debug.unityLogger messages to be captured.")]
         public string debugLogLevel;
 
         /// <summary>
-        /// Optional explicit LogType to use for filtering Debug.unityLogger
+        /// Optional explicit <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> to use for filtering Debug.unityLogger
         /// messages (overrides debugLogLevel string when present).
         /// </summary>
         [Tooltip("Optional explicit Unity LogType to filter Debug.unityLogger messages.")]
@@ -118,7 +124,7 @@ namespace rlmg.Tools.Core
 
         /// <summary>
         /// Computed property that converts the string-based logLevel into the
-        /// corresponding UnityEngine.LogType. Returns null if not parseable.
+        /// corresponding <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a>. Returns null if not parseable.
         /// </summary>
         public LogType? LogLevel => GetLogType(logLevel);
 
@@ -135,11 +141,11 @@ namespace rlmg.Tools.Core
         public LogType? DebugLogLevel => GetLogType(debugLogLevel);
 
         /// <summary>
-        /// Get the native LogType enum corresponding to the input string (e.g. 'fatal', 'warn', 'verbose').
-        /// Employs a custom mapping of string to LogType.
+        /// Get the native <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> enum corresponding to the input string (e.g. 'fatal', 'warn', 'verbose').
+        /// Employs a custom mapping of string to <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a>.
         /// </summary>
         /// <param name="logtype">representation of log level / verbosity</param>
-        /// <returns>Nullable native LogType enum</returns>
+        /// <returns>Nullable native <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> enum</returns>
         public LogType? GetLogType(string logtype)
         {
             if (logtype == null)
@@ -288,6 +294,7 @@ namespace rlmg.Tools.Core
         protected bool doLogDebugLogs = false;
 
         /// <summary>
+        /// Native Debug <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">LogType</a> enum.
         /// What level of Debug.unityLogger messages should be logged to disk?
         /// Error = fewest messages.
         /// </summary>

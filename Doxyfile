@@ -1096,6 +1096,10 @@ DISABLE_INDEX          = NO
 
 ENUM_VALUES_PER_LINE   = 4
 
+# When the SHOW_ENUM_VALUES tag is set doxygen will show the specified enumeration values besides the enumeration mnemonics.
+
+SHOW_ENUM_VALUES    = YES
+
 # The GENERATE_TREEVIEW tag is used to specify whether a tree-like index 
 # structure should be generated to display hierarchical information. 
 # If the tag value is set to YES, a side panel will be generated 
