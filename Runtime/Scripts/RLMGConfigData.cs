@@ -3,6 +3,9 @@ namespace rlmg.Tools.Core
     using System;
     using UnityEngine;
 
+    /// <summary>
+    /// Configuration data object for RLMGConfigLoader
+    /// </summary>
     [Serializable]
     public class RLMGConfigData
     {

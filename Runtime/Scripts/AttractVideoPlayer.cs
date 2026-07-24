@@ -6,27 +6,55 @@ namespace rlmg.Tools.Core
     using System;
     using System.Collections;
 
+    /// <summary>
+    /// Manages a video player and its appearance with the AttractTimeout's Timeout and Dismiss methods.
+    /// Includes the following features:
+    /// 1. Fades a CanvasGroup to control the appearance of the video player, with configurable durations, and
+    /// 2. Optionally start in attract state.
+    /// </summary>
     [RequireComponent(typeof(AttractTimeout))]
     public class AttractVideoPlayer : VideoPlayerManager
     {
         protected AttractTimeout attractTimeout;
 
+        /// <summary>
+        /// Controls visibility of video player
+        /// </summary>
         [Header("Attract Settings")]
         [SerializeField]
         protected CanvasGroup attractCanvasGroup;
 
+        /// <summary>
+        /// Whether or not to go into attract state once the video player has loaded
+        /// </summary>
         [SerializeField]
         protected bool doGoToAttractOnLoad = true;
 
+        /// <summary>
+        /// Durations of fade in and fade out of canvas group visibility.
+        /// </summary>
+        /// <remarks>This is distinct from the base video player's fade duration, which are used for gracefully dipping to a color while the video is loading.</remarks>
         [SerializeField]
         protected float attractFadeInDuration = 1f, attractFadeOutDuration = 1f;
 
+        /// <summary>
+        /// Manages canvas group visibility fade
+        /// </summary>
         protected Coroutine attractFadeRoutine;
 
-        // keep the configured playback volume so fades can ramp back to it
+        /// <summary>
+        /// Stores the configured playback volume so fades can ramp back to it
+        /// </summary>
         protected float savedVideoVolume = 1f;
 
+        /// <summary>
+        /// When the canvas group is fully visible
+        /// </summary>
         public event Action AttractFadeInCompleted;
+
+        /// <summary>
+        /// When the canvas group is fully invisible
+        /// </summary>
         public event Action AttractFadeOutCompleted;
 
         protected override void Awake()

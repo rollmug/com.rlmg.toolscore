@@ -2,11 +2,10 @@ namespace rlmg.Tools.Core
 {
     using System;
     using System.IO;
+    using System.Linq;
+    using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using UnityEngine;
-
-    // 
-    // contributiongs - use test account in github?
 
     public enum LogDestinationPath
     {
@@ -28,6 +27,9 @@ namespace rlmg.Tools.Core
         INFO
     }
 
+    /// <summary>
+    /// Configuration data object for RLMGLogger
+    /// </summary>
     [Serializable]
     public class RLMGLoggerConfigurationData
     {
@@ -132,6 +134,12 @@ namespace rlmg.Tools.Core
         /// </summary>
         public LogType? DebugLogLevel => GetLogType(debugLogLevel);
 
+        /// <summary>
+        /// Get the native LogType enum corresponding to the input string (e.g. 'fatal', 'warn', 'verbose').
+        /// Employs a custom mapping of string to LogType.
+        /// </summary>
+        /// <param name="logtype">representation of log level / verbosity</param>
+        /// <returns>Nullable native LogType enum</returns>
         public LogType? GetLogType(string logtype)
         {
             if (logtype == null)
@@ -164,6 +172,11 @@ namespace rlmg.Tools.Core
             return null;
         }
 
+        /// <summary>
+        /// Get the LogDestinationPath enum corresponding to the input string (e.g. 'desktop', 'Streaming Assets')
+        /// </summary>
+        /// <param name="locationName">representation of log location / folder name</param>
+        /// <returns>Nullable LogDestinationPath enum</returns>
         public LogDestinationPath? GetLogDestinationPath(string locationName)
         {
             if (locationName == null)
@@ -187,7 +200,8 @@ namespace rlmg.Tools.Core
     }
 
     /// <summary>
-    /// The popular RLMGLogger singleton, with a few key features:
+    /// The popular RLMGLogger singleton.
+    /// Includes the following features:
     /// 1. Logging to disk, as expected;
     /// 2. Static Log methods that will instantiate a Do Not Destroy on Load logger if one doesn't already exist;
     /// 3. Optional configuration in Unity Inspector; and
@@ -195,23 +209,45 @@ namespace rlmg.Tools.Core
     /// </summary>
     public class RLMGLogger : SingletonDoNotDestroy<RLMGLogger>
     {
+        /// <summary>
+        /// What main folder should the logs be written to? (e.g. Desktop, Application root, Streaming Assets)
+        /// </summary>
         [Header("Output")]
         [SerializeField]
         protected LogDestinationPath destPath = LogDestinationPath.Application;
 
+        /// <summary>
+        /// What subfolder should the logs be written to?
+        /// Creates folder if it does not already exist, at destPath (e.g. "Streaming Assets/Exhibit Logs/")
+        /// </summary>
         [SerializeField]
         protected string logFolderName = "Exhibit Logs";
 
+        /// <summary>
+        /// What base file name should the log files use?
+        /// Will have a timestamp appended when written.
+        /// </summary>
         [SerializeField]
         protected string logFileName = "exhibit_log";
         //todo get exhibit name from like Unity project meta data... wherever the executable file name is defined
 
+        /// <summary>
+        /// What delimiter should the log files use? (i.e. Comma or Tab)
+        /// Log files will be saved with the corresponding extension (e.g. "csv" for Comma)
+        /// </summary>
         [SerializeField]
         protected LogDelimiter logDelimiter = LogDelimiter.Comma;
 
+        /// <summary>
+        /// Contents of the header row.
+        /// Comma separated. Will have whitespace trimmed.
+        /// </summary>
         [SerializeField]
         protected string headerLine = "Timestamp, Type, Message, Stack Trace";
 
+        /// <summary>
+        /// System.Datetime recognized timestamp format string
+        /// </summary>
         [SerializeField]
         protected string timestampFormat = "yyyy/MM/dd HH:mm:ss";
 
@@ -264,16 +300,34 @@ namespace rlmg.Tools.Core
         [SerializeField]
         protected bool doLogDebugStackTrace = false;
 
+        /// <summary>
+        /// Managed by this class for not logging messages twice when logging things directly AND logging native Debug logging
+        /// </summary>
         protected bool doSkipLoggingDebugLogs = false;
 
+        /// <summary>
+        /// Managed by this class for building log folder path once.
+        /// </summary>
         protected string logFolderPath;
 
+        /// <summary>
+        /// Managed by this class for building log file path once.
+        /// </summary>
         protected string logFilePath;
 
+        /// <summary>
+        /// Managed by this class for choosing log file delimiter.
+        /// </summary>
         protected string delimiter = ",";
 
+        /// <summary>
+        /// Managed by this class for choosing log file extension once.
+        /// </summary>
         protected string extension = ".csv";
 
+        /// <summary>
+        /// Invokes Setup
+        /// </summary>
         protected virtual void Awake()
         {
             Setup();
@@ -289,6 +343,10 @@ namespace rlmg.Tools.Core
             Application.logMessageReceived -= HandleDebugLog;
         }
 
+        /// <summary>
+        /// Apply configuration settings to this Instance.
+        /// </summary>
+        /// <param name="data"></param>
         public virtual void Configure(RLMGLoggerConfigurationData data)
         {
             if (data == null)
@@ -331,6 +389,9 @@ namespace rlmg.Tools.Core
                 doLogDebugStackTrace = (bool)data.doLogDebugStackTrace;
         }
 
+        /// <summary>
+        /// Set up fields managed by this class, and create files and folders if they do not yet exist.
+        /// </summary>
         protected virtual void Setup()
         {
             if (Application.isEditor && !doLogToDiskInEditor)
@@ -342,7 +403,7 @@ namespace rlmg.Tools.Core
             delimiter = logDelimiter == LogDelimiter.Comma ? "," : "\t";
 
             // -------- create log folder if necessary --------
-            SetLogPath();
+            SetLogFolderPath();
 
             if (!Directory.Exists(logFolderPath))
             {
@@ -394,13 +455,24 @@ namespace rlmg.Tools.Core
 
             if (!File.Exists(logFilePath))
             {
+                IEnumerable<string> headerContents = headerLine.Split(',')
+                                      .Select(x => x.Trim())
+                                      .Where(x => !string.IsNullOrEmpty(x));
+
+                string header = logDelimiter == LogDelimiter.Comma ?
+                    string.Join(",", headerContents) :
+                    string.Join("\t", headerContents);
+
                 // create if a new log file
-                string header = headerLine + Environment.NewLine;
+                header += Environment.NewLine;
                 File.WriteAllText(logFilePath, header);
             }
         }
 
-        protected virtual void SetLogPath()
+        /// <summary>
+        /// Sets logFolderPath field
+        /// </summary>
+        protected virtual void SetLogFolderPath()
         {
             string path = "";
             if (destPath == LogDestinationPath.Desktop)
@@ -451,6 +523,12 @@ namespace rlmg.Tools.Core
             doSkipLoggingDebugLogs = false;
         }
 
+        /// <summary>
+        /// Write a log line to the log file.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="message"></param>
+        /// <param name="stackTrace"></param>
         protected virtual void WriteLine(
             LogType type,
             string message,
@@ -536,8 +614,12 @@ namespace rlmg.Tools.Core
             LogMessage(LogType.Error, message, context);
         }
 
-
-        [Obsolete]
+        /// <summary>
+        /// Log a message.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="type"></param>
+        [Obsolete("See static methods Log, LogWarning, and LogError")]
         public virtual void Log(
             string message,
             MESSAGETYPE type = MESSAGETYPE.INFO

@@ -6,18 +6,34 @@ namespace rlmg.Tools.Core
     using UnityEngine.Networking;
     using Newtonsoft.Json;
 
+    /// <summary>
+    /// Configures the logger, attract and app manager components in RLMG Core
+    /// </summary>
+    /// <remarks>Will Instantiate a RLMGLogger instance if not already present.</remarks>
     [DefaultExecutionOrder(-100)]
     public class RLMGConfigLoader : ContentLoader
     {
+        /// <summary>
+        /// Optionally present AppManager instance, which this will configure.
+        /// </summary>
         [SerializeField]
         protected AppManager appManager;
 
+        /// <summary>
+        /// Optionally present AttractVideoPlayer instance, which this will configure.
+        /// </summary>
         [SerializeField]
         protected AttractVideoPlayer attractVideoPlayer;
 
+        /// <summary>
+        /// Optionally present AttractTimeout instances, which this will configure.
+        /// </summary>
         [SerializeField]
         protected AttractTimeout[] attractTimeouts;
 
+        /// <summary>
+        /// The configuration data loaded
+        /// </summary>
         public RLMGConfigData Data;
 
         protected override void Awake()

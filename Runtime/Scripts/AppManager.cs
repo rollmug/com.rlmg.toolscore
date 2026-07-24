@@ -4,6 +4,9 @@ namespace rlmg.Tools.Core
     using UnityEngine;
     using UnityEngine.InputSystem;
 
+    /// <summary>
+    /// Configuration data object for each display the software sets up.
+    /// </summary>
     [Serializable]
     public class DisplayData
     {
@@ -21,6 +24,9 @@ namespace rlmg.Tools.Core
         public bool doFullScreen = true;
     }
 
+    /// <summary>
+    /// Configuration data object for AppManager
+    /// </summary>
     [Serializable]
     public class AppManagerConfigurationData
     {
@@ -54,6 +60,13 @@ namespace rlmg.Tools.Core
         public int? targetFrameRate;
     }
 
+    /// <summary>
+    /// Setup and manager class
+    /// Includes the following features:
+    /// 1. Logs the app's start and exit,
+    /// 2. Monitors key commands to exit the app and show the cursor, and
+    /// 3. Sets up input and output features of the Unity game engine.
+    /// </summary>
     public class AppManager : MonoBehaviour
     {
         /// <summary>
@@ -70,12 +83,21 @@ namespace rlmg.Tools.Core
         [SerializeField]
         protected bool doDebugLogSetup = false;
 
+        /// <summary>
+        /// Overrides the Unity player's default setting of 1.
+        /// </summary>
         [SerializeField]
         protected int vSyncCount = 1;
 
+        /// <summary>
+        /// Overrides the Unity player's default setting. Note that this is ignored when vSyncCount > 0.
+        /// </summary>
         [SerializeField]
         protected int targetFrameRate = 60;
 
+        /// <summary>
+        /// Logs app start and invokes Setup methods
+        /// </summary>
         protected virtual void Start()
         {
             RLMGLogger.Log("Application Awake - version #" + Application.version);
@@ -86,6 +108,9 @@ namespace rlmg.Tools.Core
             SetupFrequency();
         }
 
+        /// <summary>
+        /// Monitors for key input
+        /// </summary>
         protected virtual void Update()
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
@@ -95,6 +120,9 @@ namespace rlmg.Tools.Core
                 Cursor.visible = !Cursor.visible;
         }
 
+        /// <summary>
+        /// Logs app exit
+        /// </summary>
         protected virtual void OnApplicationQuit()
         {
             RLMGLogger.Log(
@@ -105,6 +133,10 @@ namespace rlmg.Tools.Core
                 );
         }
 
+        /// <summary>
+        /// Apply configuration settings
+        /// </summary>
+        /// <param name="data"></param>
         public virtual void Configure(AppManagerConfigurationData data)
         {
             if (data == null)
@@ -123,6 +155,9 @@ namespace rlmg.Tools.Core
                 targetFrameRate = (int)data.targetFrameRate;
         }
 
+        /// <summary>
+        /// Setup displays used by the app, as set in the displaysData field
+        /// </summary>
         protected virtual void SetupDisplays()
         {
             if (displaysData.Length == 0)
@@ -182,6 +217,9 @@ namespace rlmg.Tools.Core
             }
         }
 
+        /// <summary>
+        /// Helper method for optionally logging displays setup
+        /// </summary>
         protected virtual void LogAvailableDisplayData()
         {
             string primaryDisplayDebugInfo = "Primary Display    App (screen dims): " + Screen.width + " x " + Screen.height + " (" + ((float)Screen.width / (float)Screen.height) + ")";
@@ -203,6 +241,9 @@ namespace rlmg.Tools.Core
             RLMGLogger.Log(primaryDisplayDebugInfo);
         }
 
+        /// <summary>
+        /// Set up frame rate-related settings
+        /// </summary>
         protected void SetupFrequency()
         {
             QualitySettings.vSyncCount = vSyncCount;
