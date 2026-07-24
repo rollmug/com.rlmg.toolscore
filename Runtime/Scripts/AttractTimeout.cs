@@ -61,6 +61,9 @@ namespace rlmg.Tools.Core
             }
         }
 
+        /// <summary>
+        /// When the a period of time greater than the TimeoutDuration has passed without user input
+        /// </summary>
         protected virtual void Timeout()
         {
             TimeSinceLastClick = TimeoutDuration + 1; //allows Timeout to be invoked to force a timeout
@@ -68,6 +71,10 @@ namespace rlmg.Tools.Core
 
             AttractStarting?.Invoke();
         }
+
+        /// <summary>
+        /// When user input is detected after a timeout
+        /// </summary>
 
         protected virtual void Dismiss()
         {
