@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_r_l_m
 </div><!--header-->
 <div class="contents">
 
-<p>The popular RLMGLogger singleton, with a few key features:  
+<p>The popular RLMGLogger singleton.  
  <a href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for rlmg.Tools.Core.RLMGLogger:</div>
@@ -114,8 +114,10 @@ Inheritance diagram for rlmg.Tools.Core.RLMGLogger:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4d71a00d87be6a1fe0d5ded914b6576"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ac4d71a00d87be6a1fe0d5ded914b6576">Configure</a> (<a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html">RLMGLoggerConfigurationData</a> data)</td></tr>
+<tr class="memdesc:ac4d71a00d87be6a1fe0d5ded914b6576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply configuration settings to this Instance.  <br /></td></tr>
 <tr class="separator:ac4d71a00d87be6a1fe0d5ded914b6576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7e5e186ac91bf47fba46a157feed95c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aa7e5e186ac91bf47fba46a157feed95c">Log</a> (string message, <a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a1c5b4024376981bbd7177f799d70cdad">MESSAGETYPE</a> type=<a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a1c5b4024376981bbd7177f799d70cdada551b723eafd6a31d444fcb2f5920fbd3">MESSAGETYPE.INFO</a>)</td></tr>
+<tr class="memdesc:aa7e5e186ac91bf47fba46a157feed95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message.  <br /></td></tr>
 <tr class="separator:aa7e5e186ac91bf47fba46a157feed95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy&lt; RLMGLogger &gt;</a></td></tr>
 <tr class="memitem:af2c57ebd75c530ee970899cb6b91a87d inherit pub_methods_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#af2c57ebd75c530ee970899cb6b91a87d">OnDestroy</a> ()</td></tr>
@@ -140,34 +142,44 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afd89151436962ca23f1abf39a7b9b02a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afd89151436962ca23f1abf39a7b9b02a">Awake</a> ()</td></tr>
+<tr class="memdesc:afd89151436962ca23f1abf39a7b9b02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes Setup.  <br /></td></tr>
 <tr class="separator:afd89151436962ca23f1abf39a7b9b02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe9fdd17e91bcbccb331e36153332b50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afe9fdd17e91bcbccb331e36153332b50">OnEnable</a> ()</td></tr>
 <tr class="separator:afe9fdd17e91bcbccb331e36153332b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea02ab50d2599a12b4788db60d3c3585"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea02ab50d2599a12b4788db60d3c3585">OnDisable</a> ()</td></tr>
 <tr class="separator:aea02ab50d2599a12b4788db60d3c3585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2def077f1b9e727fab6e1d2bb028ec83"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2def077f1b9e727fab6e1d2bb028ec83">Setup</a> ()</td></tr>
+<tr class="memdesc:a2def077f1b9e727fab6e1d2bb028ec83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up fields managed by this class, and create files and folders if they do not yet exist.  <br /></td></tr>
 <tr class="separator:a2def077f1b9e727fab6e1d2bb028ec83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af75f09e270dfee6780a76bd1c83b4931"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#af75f09e270dfee6780a76bd1c83b4931">SetLogPath</a> ()</td></tr>
-<tr class="separator:af75f09e270dfee6780a76bd1c83b4931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c3679c4ff04177eaeca6dccd53e0dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a23c3679c4ff04177eaeca6dccd53e0dc">SetLogFolderPath</a> ()</td></tr>
+<tr class="memdesc:a23c3679c4ff04177eaeca6dccd53e0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets logFolderPath field.  <br /></td></tr>
+<tr class="separator:a23c3679c4ff04177eaeca6dccd53e0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e319e9285159c3f76d04179c2a0e7fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2e319e9285159c3f76d04179c2a0e7fc">HandleDebugLog</a> (string message, string stackTrace, LogType type)</td></tr>
 <tr class="memdesc:a2e319e9285159c3f76d04179c2a0e7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscription to Debug.unityLogger messages.  <br /></td></tr>
 <tr class="separator:a2e319e9285159c3f76d04179c2a0e7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581f8f0043e9eff77d9c91994ff4b2e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a581f8f0043e9eff77d9c91994ff4b2e1">WriteLine</a> (LogType type, string message, string stackTrace=null)</td></tr>
+<tr class="memdesc:a581f8f0043e9eff77d9c91994ff4b2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a log line to the log file.  <br /></td></tr>
 <tr class="separator:a581f8f0043e9eff77d9c91994ff4b2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aea0be5644033290ba0d0c2e7335e45bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893">LogDestinationPath</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea0be5644033290ba0d0c2e7335e45bf">destPath</a> = <a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893ae498749f3c42246d50b15c81c101d988">LogDestinationPath.Application</a></td></tr>
+<tr class="memdesc:aea0be5644033290ba0d0c2e7335e45bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">What main folder should the logs be written to? (e.g.  <br /></td></tr>
 <tr class="separator:aea0be5644033290ba0d0c2e7335e45bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac059e5c53a1c9d9e67e10e717feaa187"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ac059e5c53a1c9d9e67e10e717feaa187">logFolderName</a> = &quot;Exhibit Logs&quot;</td></tr>
+<tr class="memdesc:ac059e5c53a1c9d9e67e10e717feaa187"><td class="mdescLeft">&#160;</td><td class="mdescRight">What subfolder should the logs be written to? Creates folder if it does not already exist, at destPath (e.g.  <br /></td></tr>
 <tr class="separator:ac059e5c53a1c9d9e67e10e717feaa187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d943d7b913ecb83ef830f44802119a8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a0d943d7b913ecb83ef830f44802119a8">logFileName</a> = &quot;exhibit_log&quot;</td></tr>
+<tr class="memdesc:a0d943d7b913ecb83ef830f44802119a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">What base file name should the log files use? Will have a timestamp appended when written.  <br /></td></tr>
 <tr class="separator:a0d943d7b913ecb83ef830f44802119a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2566f2691bb8aa53564b958774857a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a1d1e91034895c6ba2a0fddfe5443ef21">LogDelimiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a3f2566f2691bb8aa53564b958774857a">logDelimiter</a> = <a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a1d1e91034895c6ba2a0fddfe5443ef21a58be47db9455679e6a44df2eff9c9fa6">LogDelimiter.Comma</a></td></tr>
+<tr class="memdesc:a3f2566f2691bb8aa53564b958774857a"><td class="mdescLeft">&#160;</td><td class="mdescRight">What delimiter should the log files use? (i.e.  <br /></td></tr>
 <tr class="separator:a3f2566f2691bb8aa53564b958774857a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a327add6025956c94109301a5e8efcfef"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a327add6025956c94109301a5e8efcfef">headerLine</a> = &quot;Timestamp, Type, Message, Stack Trace&quot;</td></tr>
+<tr class="memdesc:a327add6025956c94109301a5e8efcfef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contents of the header row.  <br /></td></tr>
 <tr class="separator:a327add6025956c94109301a5e8efcfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bcdefa86248f8476fcde4dd1d766787"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6bcdefa86248f8476fcde4dd1d766787">timestampFormat</a> = &quot;yyyy/MM/dd HH:mm:ss&quot;</td></tr>
+<tr class="memdesc:a6bcdefa86248f8476fcde4dd1d766787"><td class="mdescLeft">&#160;</td><td class="mdescRight">System.Datetime recognized timestamp format string.  <br /></td></tr>
 <tr class="separator:a6bcdefa86248f8476fcde4dd1d766787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66f1308cd3fd92c2dbffc1cb68e6bd08"><td class="memItemLeft" align="right" valign="top">LogType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a66f1308cd3fd92c2dbffc1cb68e6bd08">verbosity</a> = LogType.Log</td></tr>
 <tr class="memdesc:a66f1308cd3fd92c2dbffc1cb68e6bd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">What level of messages should be logged to disk? Error = fewest messages.  <br /></td></tr>
@@ -191,14 +203,19 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a7b9c8b932c3975fe8bb1cf00ec3df11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include stack trace when writing Debug.unityLogger messages to disk?  <br /></td></tr>
 <tr class="separator:a7b9c8b932c3975fe8bb1cf00ec3df11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345455b8e56ec52630d6b6fec6d90906"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a345455b8e56ec52630d6b6fec6d90906">doSkipLoggingDebugLogs</a> = false</td></tr>
+<tr class="memdesc:a345455b8e56ec52630d6b6fec6d90906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for not logging messages twice when logging things directly AND logging native Debug logging.  <br /></td></tr>
 <tr class="separator:a345455b8e56ec52630d6b6fec6d90906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6debde6d20a28184e3f7aef401d3fe15"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6debde6d20a28184e3f7aef401d3fe15">logFolderPath</a></td></tr>
+<tr class="memdesc:a6debde6d20a28184e3f7aef401d3fe15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for building log folder path once.  <br /></td></tr>
 <tr class="separator:a6debde6d20a28184e3f7aef401d3fe15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f7b592324d9b089b573cf1c78147120"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a0f7b592324d9b089b573cf1c78147120">logFilePath</a></td></tr>
+<tr class="memdesc:a0f7b592324d9b089b573cf1c78147120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for building log file path once.  <br /></td></tr>
 <tr class="separator:a0f7b592324d9b089b573cf1c78147120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48ab414b07b1668221b291211ca3f5da"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a48ab414b07b1668221b291211ca3f5da">delimiter</a> = &quot;,&quot;</td></tr>
+<tr class="memdesc:a48ab414b07b1668221b291211ca3f5da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for choosing log file delimiter.  <br /></td></tr>
 <tr class="separator:a48ab414b07b1668221b291211ca3f5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c346ca4f1bcced2fc49209e21ceee28"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a8c346ca4f1bcced2fc49209e21ceee28">extension</a> = &quot;.csv&quot;</td></tr>
+<tr class="memdesc:a8c346ca4f1bcced2fc49209e21ceee28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for choosing log file extension once.  <br /></td></tr>
 <tr class="separator:a8c346ca4f1bcced2fc49209e21ceee28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -208,8 +225,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a272ac158e638b186d883fba6f2479a62 inherit properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The popular RLMGLogger singleton, with a few key features: </p>
-<ol type="1">
+<div class="textblock"><p>The popular RLMGLogger singleton. </p>
+<p>Includes the following features:</p><ol type="1">
 <li>Logging to disk, as expected;</li>
 <li>Static Log methods that will instantiate a Do Not Destroy on Load logger if one doesn't already exist;</li>
 <li>Optional configuration in Unity Inspector; and</li>
@@ -239,6 +256,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Invokes Setup. </p>
+
 </div>
 </div>
 <a id="ac4d71a00d87be6a1fe0d5ded914b6576" name="ac4d71a00d87be6a1fe0d5ded914b6576"></a>
@@ -264,6 +283,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Apply configuration settings to this Instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -398,6 +425,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Log a message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td></td></tr>
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -595,8 +631,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af75f09e270dfee6780a76bd1c83b4931" name="af75f09e270dfee6780a76bd1c83b4931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af75f09e270dfee6780a76bd1c83b4931">&#9670;&#160;</a></span>SetLogPath()</h2>
+<a id="a23c3679c4ff04177eaeca6dccd53e0dc" name="a23c3679c4ff04177eaeca6dccd53e0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c3679c4ff04177eaeca6dccd53e0dc">&#9670;&#160;</a></span>SetLogFolderPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,7 +641,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void rlmg.Tools.Core.RLMGLogger.SetLogPath </td>
+          <td class="memname">virtual void rlmg.Tools.Core.RLMGLogger.SetLogFolderPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -617,6 +653,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets logFolderPath field. </p>
 
 </div>
 </div>
@@ -642,6 +680,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set up fields managed by this class, and create files and folders if they do not yet exist. </p>
 
 </div>
 </div>
@@ -684,6 +724,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Write a log line to the log file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td></td></tr>
+    <tr><td class="paramname">message</td><td></td></tr>
+    <tr><td class="paramname">stackTrace</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -732,6 +782,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Managed by this class for choosing log file delimiter. </p>
+
 </div>
 </div>
 <a id="aea0be5644033290ba0d0c2e7335e45bf" name="aea0be5644033290ba0d0c2e7335e45bf"></a>
@@ -753,6 +805,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>What main folder should the logs be written to? (e.g. </p>
+<p>Desktop, Application root, Streaming Assets) </p>
 
 </div>
 </div>
@@ -872,6 +927,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Managed by this class for not logging messages twice when logging things directly AND logging native Debug logging. </p>
+
 </div>
 </div>
 <a id="a8c346ca4f1bcced2fc49209e21ceee28" name="a8c346ca4f1bcced2fc49209e21ceee28"></a>
@@ -893,6 +950,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Managed by this class for choosing log file extension once. </p>
 
 </div>
 </div>
@@ -916,6 +975,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Contents of the header row. </p>
+<p>Comma separated. Will have whitespace trimmed. </p>
+
 </div>
 </div>
 <a id="a3f2566f2691bb8aa53564b958774857a" name="a3f2566f2691bb8aa53564b958774857a"></a>
@@ -937,6 +999,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>What delimiter should the log files use? (i.e. </p>
+<p>Comma or Tab) Log files will be saved with the corresponding extension (e.g. "csv" for Comma) </p>
 
 </div>
 </div>
@@ -960,6 +1025,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>What base file name should the log files use? Will have a timestamp appended when written. </p>
+
 </div>
 </div>
 <a id="a0f7b592324d9b089b573cf1c78147120" name="a0f7b592324d9b089b573cf1c78147120"></a>
@@ -981,6 +1048,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Managed by this class for building log file path once. </p>
 
 </div>
 </div>
@@ -1004,6 +1073,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>What subfolder should the logs be written to? Creates folder if it does not already exist, at destPath (e.g. </p>
+<p>"Streaming Assets/Exhibit Logs/") </p>
+
 </div>
 </div>
 <a id="a6debde6d20a28184e3f7aef401d3fe15" name="a6debde6d20a28184e3f7aef401d3fe15"></a>
@@ -1025,6 +1097,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Managed by this class for building log folder path once. </p>
 
 </div>
 </div>
@@ -1073,6 +1147,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>System.Datetime recognized timestamp format string. </p>
+
 </div>
 </div>
 <a id="a66f1308cd3fd92c2dbffc1cb68e6bd08" name="a66f1308cd3fd92c2dbffc1cb68e6bd08"></a>
@@ -1109,7 +1185,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html">RLMGLogger</a></li>
-    <li class="footer">Generated on Fri Jul 24 2026 12:48:49 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Jul 24 2026 13:48:51 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

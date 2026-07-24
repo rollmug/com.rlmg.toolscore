@@ -10,7 +10,7 @@ var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger =
     [ "LogWarning", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a13ddf806a24d1a31944e21386cdd0212", null ],
     [ "OnDisable", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea02ab50d2599a12b4788db60d3c3585", null ],
     [ "OnEnable", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afe9fdd17e91bcbccb331e36153332b50", null ],
-    [ "SetLogPath", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#af75f09e270dfee6780a76bd1c83b4931", null ],
+    [ "SetLogFolderPath", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a23c3679c4ff04177eaeca6dccd53e0dc", null ],
     [ "Setup", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2def077f1b9e727fab6e1d2bb028ec83", null ],
     [ "WriteLine", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a581f8f0043e9eff77d9c91994ff4b2e1", null ],
     [ "debugLogVerbosity", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a8a6f90ca9251ffad7c24cc867cfeea0f", null ],

@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_attra
   <div class="headertitle"><div class="title">rlmg.Tools.Core.AttractVideoPlayer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages a video player and its appearance with the AttractTimeout's Timeout and Dismiss methods.  
+ <a href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for rlmg.Tools.Core.AttractVideoPlayer:</div>
 <div class="dyncontent">
@@ -142,26 +145,39 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9c0c00be8d00c1e4800970eb60375a24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html">AttractTimeout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a9c0c00be8d00c1e4800970eb60375a24">attractTimeout</a></td></tr>
 <tr class="separator:a9c0c00be8d00c1e4800970eb60375a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa90aa73dd12df4caf763df48bb8fc530"><td class="memItemLeft" align="right" valign="top">CanvasGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#aa90aa73dd12df4caf763df48bb8fc530">attractCanvasGroup</a></td></tr>
+<tr class="memdesc:aa90aa73dd12df4caf763df48bb8fc530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls visibility of video player.  <br /></td></tr>
 <tr class="separator:aa90aa73dd12df4caf763df48bb8fc530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b34aae48799a03d56c4a83e0234cb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ab1b34aae48799a03d56c4a83e0234cb5">doGoToAttractOnLoad</a> = true</td></tr>
+<tr class="memdesc:ab1b34aae48799a03d56c4a83e0234cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to go into attract state once the video player has loaded.  <br /></td></tr>
 <tr class="separator:ab1b34aae48799a03d56c4a83e0234cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ac0b507c40f8a83fa61a35ac6e7581"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a18ac0b507c40f8a83fa61a35ac6e7581">attractFadeInDuration</a> = 1f</td></tr>
+<tr class="memdesc:a18ac0b507c40f8a83fa61a35ac6e7581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Durations of fade in and fade out of canvas group visibility.  <br /></td></tr>
 <tr class="separator:a18ac0b507c40f8a83fa61a35ac6e7581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcd77ed04563afe4b30828f8bd9f4b2f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#abcd77ed04563afe4b30828f8bd9f4b2f">attractFadeOutDuration</a> = 1f</td></tr>
 <tr class="separator:abcd77ed04563afe4b30828f8bd9f4b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a81d11a10a8c621851eb3fdff23c8a"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a14a81d11a10a8c621851eb3fdff23c8a">attractFadeRoutine</a></td></tr>
+<tr class="memdesc:a14a81d11a10a8c621851eb3fdff23c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages canvas group visibility fade.  <br /></td></tr>
 <tr class="separator:a14a81d11a10a8c621851eb3fdff23c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b944abd5b38f40c2300cceae7d49149"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a4b944abd5b38f40c2300cceae7d49149">savedVideoVolume</a> = 1f</td></tr>
+<tr class="memdesc:a4b944abd5b38f40c2300cceae7d49149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the configured playback volume so fades can ramp back to it.  <br /></td></tr>
 <tr class="separator:a4b944abd5b38f40c2300cceae7d49149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
 <tr class="memitem:ad64ab367c6a35517be8683904d86726e"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ad64ab367c6a35517be8683904d86726e">AttractFadeInCompleted</a></td></tr>
+<tr class="memdesc:ad64ab367c6a35517be8683904d86726e"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the canvas group is fully visible.  <br /></td></tr>
 <tr class="separator:ad64ab367c6a35517be8683904d86726e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66bf98b8afd3072701eb8043640a434d"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a66bf98b8afd3072701eb8043640a434d">AttractFadeOutCompleted</a></td></tr>
+<tr class="memdesc:a66bf98b8afd3072701eb8043640a434d"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the canvas group is fully invisible.  <br /></td></tr>
 <tr class="separator:a66bf98b8afd3072701eb8043640a434d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages a video player and its appearance with the AttractTimeout's Timeout and Dismiss methods. </p>
+<p>Includes the following features:</p><ol type="1">
+<li>Fades a CanvasGroup to control the appearance of the video player, with configurable durations, and</li>
+<li>Optionally start in attract state. </li>
+</ol>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9a4cdb49611cf2058580ffbb5b9c07ee" name="a9a4cdb49611cf2058580ffbb5b9c07ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a4cdb49611cf2058580ffbb5b9c07ee">&#9670;&#160;</a></span>Awake()</h2>
 
@@ -593,6 +609,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Controls visibility of video player. </p>
+
 </div>
 </div>
 <a id="a18ac0b507c40f8a83fa61a35ac6e7581" name="a18ac0b507c40f8a83fa61a35ac6e7581"></a>
@@ -614,6 +632,9 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Durations of fade in and fade out of canvas group visibility. </p>
+<p>This is distinct from the base video player's fade duration, which are used for gracefully dipping to a color while the video is loading.</p>
 
 </div>
 </div>
@@ -659,6 +680,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Manages canvas group visibility fade. </p>
+
 </div>
 </div>
 <a id="a9c0c00be8d00c1e4800970eb60375a24" name="a9c0c00be8d00c1e4800970eb60375a24"></a>
@@ -703,6 +726,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Whether or not to go into attract state once the video player has loaded. </p>
+
 </div>
 </div>
 <a id="a4b944abd5b38f40c2300cceae7d49149" name="a4b944abd5b38f40c2300cceae7d49149"></a>
@@ -725,6 +750,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stores the configured playback volume so fades can ramp back to it. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
@@ -740,6 +767,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>When the canvas group is fully visible. </p>
+
 </div>
 </div>
 <a id="a66bf98b8afd3072701eb8043640a434d" name="a66bf98b8afd3072701eb8043640a434d"></a>
@@ -754,6 +783,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>When the canvas group is fully invisible. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -765,7 +796,7 @@ Events</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html">AttractVideoPlayer</a></li>
-    <li class="footer">Generated on Fri Jul 24 2026 12:48:49 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Jul 24 2026 13:48:51 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

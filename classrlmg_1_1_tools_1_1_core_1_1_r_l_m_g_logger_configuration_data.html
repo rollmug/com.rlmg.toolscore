@@ -97,12 +97,17 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_r_l_m
   <div class="headertitle"><div class="title">rlmg.Tools.Core.RLMGLoggerConfigurationData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Configuration data object for RLMGLogger.  
+ <a href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fd6fb2b1af8de57592669b6e1fbd5d8"><td class="memItemLeft" align="right" valign="top">LogType?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a1fd6fb2b1af8de57592669b6e1fbd5d8">GetLogType</a> (string logtype)</td></tr>
+<tr class="memdesc:a1fd6fb2b1af8de57592669b6e1fbd5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the native LogType enum corresponding to the input string (e.g.  <br /></td></tr>
 <tr class="separator:a1fd6fb2b1af8de57592669b6e1fbd5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58cc1c23726642f1205c0c87cf97dd11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893">LogDestinationPath</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a58cc1c23726642f1205c0c87cf97dd11">GetLogDestinationPath</a> (string locationName)</td></tr>
+<tr class="memdesc:a58cc1c23726642f1205c0c87cf97dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LogDestinationPath enum corresponding to the input string (e.g.  <br /></td></tr>
 <tr class="separator:a58cc1c23726642f1205c0c87cf97dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -156,7 +161,9 @@ Properties</h2></td></tr>
 <tr class="memdesc:a3dcea9c8c8325141e77dc5caa83b09ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computed property that converts the string-based debugLogLevel into the corresponding UnityEngine.LogType.  <br /></td></tr>
 <tr class="separator:a3dcea9c8c8325141e77dc5caa83b09ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Configuration data object for RLMGLogger. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a58cc1c23726642f1205c0c87cf97dd11" name="a58cc1c23726642f1205c0c87cf97dd11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58cc1c23726642f1205c0c87cf97dd11">&#9670;&#160;</a></span>GetLogDestinationPath()</h2>
 
@@ -172,6 +179,16 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the LogDestinationPath enum corresponding to the input string (e.g. </p>
+<p>'desktop', 'Streaming Assets')</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locationName</td><td>representation of log location / folder name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nullable LogDestinationPath enum</dd></dl>
 
 </div>
 </div>
@@ -190,6 +207,16 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the native LogType enum corresponding to the input string (e.g. </p>
+<p>'fatal', 'warn', 'verbose'). Employs a custom mapping of string to LogType.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logtype</td><td>representation of log level / verbosity</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nullable native LogType enum</dd></dl>
 
 </div>
 </div>
@@ -477,7 +504,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html">RLMGLoggerConfigurationData</a></li>
-    <li class="footer">Generated on Fri Jul 24 2026 12:48:49 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Jul 24 2026 13:48:51 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

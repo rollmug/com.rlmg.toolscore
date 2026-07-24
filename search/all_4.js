@@ -6,5 +6,6 @@ var searchData=
   ['fadeinattractroutine_3',['FadeInAttractRoutine',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ac3ed15cd5bacf2002afe419007e751bc',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
   ['fadeoutattract_4',['FadeOutAttract',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a12f19d3c7463b6401f334e0d00758a53',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
   ['fadeoutattractroutine_5',['FadeOutAttractRoutine',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ae5baafc44e30cf3096bc359773c19e61',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
-  ['forcetimeout_6',['ForceTimeout',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#adcd3893a54ba48308db7feefa182e501',1,'rlmg::Tools::Core::AttractTimeout']]]
+  ['forcedismiss_6',['ForceDismiss',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6f9783ea2d31b64036c9fb8dca85fff8',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['forcetimeout_7',['ForceTimeout',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a8b0509f8a475ff40e0b75b6e3bf97387',1,'rlmg::Tools::Core::AttractTimeout']]]
 ];

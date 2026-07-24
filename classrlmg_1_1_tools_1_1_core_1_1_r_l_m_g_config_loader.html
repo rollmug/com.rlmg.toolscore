@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_r_l_m
   <div class="headertitle"><div class="title">rlmg.Tools.Core.RLMGConfigLoader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Configures the logger, attract and app manager components in RLMG Core.  
+ <a href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for rlmg.Tools.Core.RLMGConfigLoader:</div>
 <div class="dyncontent">
@@ -107,6 +110,7 @@ Inheritance diagram for rlmg.Tools.Core.RLMGConfigLoader:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aada48d726a34e536a9f4c2a81825df31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#aada48d726a34e536a9f4c2a81825df31">Data</a></td></tr>
+<tr class="memdesc:aada48d726a34e536a9f4c2a81825df31"><td class="mdescLeft">&#160;</td><td class="mdescRight">The configuration data loaded.  <br /></td></tr>
 <tr class="separator:aada48d726a34e536a9f4c2a81825df31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -120,13 +124,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:add2c545dc9af4e26c82836b1bbdd9428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_app_manager.html">AppManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#add2c545dc9af4e26c82836b1bbdd9428">appManager</a></td></tr>
+<tr class="memdesc:add2c545dc9af4e26c82836b1bbdd9428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally present AppManager instance, which this will configure.  <br /></td></tr>
 <tr class="separator:add2c545dc9af4e26c82836b1bbdd9428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4a6c7f913e879d5f3e61943e590973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html">AttractVideoPlayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a6d4a6c7f913e879d5f3e61943e590973">attractVideoPlayer</a></td></tr>
+<tr class="memdesc:a6d4a6c7f913e879d5f3e61943e590973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally present AttractVideoPlayer instance, which this will configure.  <br /></td></tr>
 <tr class="separator:a6d4a6c7f913e879d5f3e61943e590973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab16fe5bda9e6cdc43c702230663df0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html">AttractTimeout</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#aab16fe5bda9e6cdc43c702230663df0a">attractTimeouts</a></td></tr>
+<tr class="memdesc:aab16fe5bda9e6cdc43c702230663df0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally present AttractTimeout instances, which this will configure.  <br /></td></tr>
 <tr class="separator:aab16fe5bda9e6cdc43c702230663df0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Configures the logger, attract and app manager components in RLMG Core. </p>
+<p>Will Instantiate a RLMGLogger instance if not already present.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3619a2437d4e8329481affe5241621a9" name="a3619a2437d4e8329481affe5241621a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3619a2437d4e8329481affe5241621a9">&#9670;&#160;</a></span>Awake()</h2>
 
@@ -209,6 +219,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Optionally present AppManager instance, which this will configure. </p>
+
 </div>
 </div>
 <a id="aab16fe5bda9e6cdc43c702230663df0a" name="aab16fe5bda9e6cdc43c702230663df0a"></a>
@@ -230,6 +242,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Optionally present AttractTimeout instances, which this will configure. </p>
 
 </div>
 </div>
@@ -253,6 +267,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Optionally present AttractVideoPlayer instance, which this will configure. </p>
+
 </div>
 </div>
 <a id="aada48d726a34e536a9f4c2a81825df31" name="aada48d726a34e536a9f4c2a81825df31"></a>
@@ -267,6 +283,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The configuration data loaded. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -278,7 +296,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html">RLMGConfigLoader</a></li>
-    <li class="footer">Generated on Fri Jul 24 2026 12:48:49 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Jul 24 2026 13:48:51 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

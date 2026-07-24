@@ -99,6 +99,9 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_attra
   <div class="headertitle"><div class="title">rlmg.Tools.Core.AttractTimeout Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>For subclassing or event listening to trigger an attract state after a configurable period of no user input.  
+ <a href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for rlmg.Tools.Core.AttractTimeout:</div>
 <div class="dyncontent">
@@ -109,46 +112,67 @@ Inheritance diagram for rlmg.Tools.Core.AttractTimeout:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cda293c7819437166d3c916ac25ad44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a7cda293c7819437166d3c916ac25ad44">ResetTimer</a> ()</td></tr>
+<tr class="memdesc:a7cda293c7819437166d3c916ac25ad44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timeout timer over.  <br /></td></tr>
 <tr class="separator:a7cda293c7819437166d3c916ac25ad44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcd3893a54ba48308db7feefa182e501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#adcd3893a54ba48308db7feefa182e501">ForceTimeout</a> ()</td></tr>
-<tr class="separator:adcd3893a54ba48308db7feefa182e501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0509f8a475ff40e0b75b6e3bf97387"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a8b0509f8a475ff40e0b75b6e3bf97387">ForceTimeout</a> ()</td></tr>
+<tr class="memdesc:a8b0509f8a475ff40e0b75b6e3bf97387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter a timed out state immediately.  <br /></td></tr>
+<tr class="separator:a8b0509f8a475ff40e0b75b6e3bf97387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9783ea2d31b64036c9fb8dca85fff8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6f9783ea2d31b64036c9fb8dca85fff8">ForceDismiss</a> ()</td></tr>
+<tr class="memdesc:a6f9783ea2d31b64036c9fb8dca85fff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter a dismissed state immedidately.  <br /></td></tr>
+<tr class="separator:a6f9783ea2d31b64036c9fb8dca85fff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae1f38a69b1fe6811c329d2112d86fcdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ae1f38a69b1fe6811c329d2112d86fcdb">DoCount</a> = false</td></tr>
+<tr class="memdesc:ae1f38a69b1fe6811c329d2112d86fcdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the timeout should be counted towards.  <br /></td></tr>
 <tr class="separator:ae1f38a69b1fe6811c329d2112d86fcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b9bf0c841e5f76611dfbd5bc585c424"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2b9bf0c841e5f76611dfbd5bc585c424">TimeoutDuration</a> = 60</td></tr>
-<tr class="memdesc:a2b9bf0c841e5f76611dfbd5bc585c424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seconds.  <br /></td></tr>
+<tr class="memdesc:a2b9bf0c841e5f76611dfbd5bc585c424"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many seconds of no user input before the attract state is triggered.  <br /></td></tr>
 <tr class="separator:a2b9bf0c841e5f76611dfbd5bc585c424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8269b3a5b25c185a51aa61048f87d6e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ac8269b3a5b25c185a51aa61048f87d6e">TimeSinceLastClick</a> = 0.0f</td></tr>
+<tr class="memdesc:ac8269b3a5b25c185a51aa61048f87d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class monitoring user input.  <br /></td></tr>
 <tr class="separator:ac8269b3a5b25c185a51aa61048f87d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6c3ed3b55a214f252c89e10fcfa65fb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6c3ed3b55a214f252c89e10fcfa65fb5">Update</a> ()</td></tr>
 <tr class="separator:a6c3ed3b55a214f252c89e10fcfa65fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99bb9ca5a602ff309aa1927f1f046627"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a99bb9ca5a602ff309aa1927f1f046627">Timeout</a> ()</td></tr>
-<tr class="separator:a99bb9ca5a602ff309aa1927f1f046627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd78bce2810ef29c11a23045c35ce188"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#abd78bce2810ef29c11a23045c35ce188">Dismiss</a> ()</td></tr>
-<tr class="separator:abd78bce2810ef29c11a23045c35ce188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d98cb088bf76e3aee9de00c16a6156b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a4d98cb088bf76e3aee9de00c16a6156b">Timeout</a> ()</td></tr>
+<tr class="memdesc:a4d98cb088bf76e3aee9de00c16a6156b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do essential timeout / attract starting logic when the a period of time greater than the TimeoutDuration has passed without user input.  <br /></td></tr>
+<tr class="separator:a4d98cb088bf76e3aee9de00c16a6156b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21ccd56cbbfbe9e64f7ac65fab81d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ad21ccd56cbbfbe9e64f7ac65fab81d98">Dismiss</a> ()</td></tr>
+<tr class="memdesc:ad21ccd56cbbfbe9e64f7ac65fab81d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do essential dismiss / attract ending logic when user input is detected after a timeout has already happened.  <br /></td></tr>
+<tr class="separator:ad21ccd56cbbfbe9e64f7ac65fab81d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e90901e133a7a1735baad5ff45c6822"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2e90901e133a7a1735baad5ff45c6822">OnTimeout</a> ()</td></tr>
+<tr class="memdesc:a2e90901e133a7a1735baad5ff45c6822"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the a period of time greater than the TimeoutDuration has passed without user input.  <br /></td></tr>
+<tr class="separator:a2e90901e133a7a1735baad5ff45c6822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f3dad13fc92f8663f8d51bbfb42297"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af9f3dad13fc92f8663f8d51bbfb42297">OnDismiss</a> ()</td></tr>
+<tr class="memdesc:af9f3dad13fc92f8663f8d51bbfb42297"><td class="mdescLeft">&#160;</td><td class="mdescRight">When user input is detected after a timeout.  <br /></td></tr>
+<tr class="separator:af9f3dad13fc92f8663f8d51bbfb42297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa9e676645d22b9889215a8e6330c07ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#aa9e676645d22b9889215a8e6330c07ee">anyClick</a> = false</td></tr>
+<tr class="memdesc:aa9e676645d22b9889215a8e6330c07ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class monitoring user input.  <br /></td></tr>
 <tr class="separator:aa9e676645d22b9889215a8e6330c07ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac846b89a98ccc781b96bb1e4c72fa1b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ac846b89a98ccc781b96bb1e4c72fa1b9">timedOut</a> = false</td></tr>
+<tr class="memdesc:ac846b89a98ccc781b96bb1e4c72fa1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class monitoring user input and timeout state.  <br /></td></tr>
 <tr class="separator:ac846b89a98ccc781b96bb1e4c72fa1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
 <tr class="memitem:a7c930f84025b3dfd31033d7e7eeda0d7"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a7c930f84025b3dfd31033d7e7eeda0d7">AttractStarting</a></td></tr>
+<tr class="memdesc:a7c930f84025b3dfd31033d7e7eeda0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked when the attract state has begun.  <br /></td></tr>
 <tr class="separator:a7c930f84025b3dfd31033d7e7eeda0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49948f2f4c9a39ec6fc4fc0957de23d"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af49948f2f4c9a39ec6fc4fc0957de23d">AttractDismissed</a></td></tr>
+<tr class="memdesc:af49948f2f4c9a39ec6fc4fc0957de23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after user input is detected, when the attract state is ending.  <br /></td></tr>
 <tr class="separator:af49948f2f4c9a39ec6fc4fc0957de23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="abd78bce2810ef29c11a23045c35ce188" name="abd78bce2810ef29c11a23045c35ce188"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd78bce2810ef29c11a23045c35ce188">&#9670;&#160;</a></span>Dismiss()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>For subclassing or event listening to trigger an attract state after a configurable period of no user input. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad21ccd56cbbfbe9e64f7ac65fab81d98" name="ad21ccd56cbbfbe9e64f7ac65fab81d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad21ccd56cbbfbe9e64f7ac65fab81d98">&#9670;&#160;</a></span>Dismiss()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +181,88 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.Dismiss </td>
+          <td class="memname">void rlmg.Tools.Core.AttractTimeout.Dismiss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Do essential dismiss / attract ending logic when user input is detected after a timeout has already happened. </p>
+
+</div>
+</div>
+<a id="a6f9783ea2d31b64036c9fb8dca85fff8" name="a6f9783ea2d31b64036c9fb8dca85fff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9783ea2d31b64036c9fb8dca85fff8">&#9670;&#160;</a></span>ForceDismiss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.ForceDismiss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enter a dismissed state immedidately. </p>
+
+</div>
+</div>
+<a id="a8b0509f8a475ff40e0b75b6e3bf97387" name="a8b0509f8a475ff40e0b75b6e3bf97387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0509f8a475ff40e0b75b6e3bf97387">&#9670;&#160;</a></span>ForceTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.ForceTimeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enter a timed out state immediately. </p>
+
+</div>
+</div>
+<a id="af9f3dad13fc92f8663f8d51bbfb42297" name="af9f3dad13fc92f8663f8d51bbfb42297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f3dad13fc92f8663f8d51bbfb42297">&#9670;&#160;</a></span>OnDismiss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.OnDismiss </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -170,22 +275,34 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>When user input is detected after a timeout. </p>
+
 </div>
 </div>
-<a id="adcd3893a54ba48308db7feefa182e501" name="adcd3893a54ba48308db7feefa182e501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcd3893a54ba48308db7feefa182e501">&#9670;&#160;</a></span>ForceTimeout()</h2>
+<a id="a2e90901e133a7a1735baad5ff45c6822" name="a2e90901e133a7a1735baad5ff45c6822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e90901e133a7a1735baad5ff45c6822">&#9670;&#160;</a></span>OnTimeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void rlmg.Tools.Core.AttractTimeout.ForceTimeout </td>
+          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.OnTimeout </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>When the a period of time greater than the TimeoutDuration has passed without user input. </p>
 
 </div>
 </div>
@@ -204,10 +321,12 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Start the timeout timer over. </p>
+
 </div>
 </div>
-<a id="a99bb9ca5a602ff309aa1927f1f046627" name="a99bb9ca5a602ff309aa1927f1f046627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99bb9ca5a602ff309aa1927f1f046627">&#9670;&#160;</a></span>Timeout()</h2>
+<a id="a4d98cb088bf76e3aee9de00c16a6156b" name="a4d98cb088bf76e3aee9de00c16a6156b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d98cb088bf76e3aee9de00c16a6156b">&#9670;&#160;</a></span>Timeout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +335,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void rlmg.Tools.Core.AttractTimeout.Timeout </td>
+          <td class="memname">void rlmg.Tools.Core.AttractTimeout.Timeout </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -224,10 +343,12 @@ Events</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Do essential timeout / attract starting logic when the a period of time greater than the TimeoutDuration has passed without user input. </p>
 
 </div>
 </div>
@@ -277,6 +398,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Managed by this class monitoring user input. </p>
+
 </div>
 </div>
 <a id="ae1f38a69b1fe6811c329d2112d86fcdb" name="ae1f38a69b1fe6811c329d2112d86fcdb"></a>
@@ -290,6 +413,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Whether or not the timeout should be counted towards. </p>
 
 </div>
 </div>
@@ -313,6 +438,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Managed by this class monitoring user input and timeout state. </p>
+
 </div>
 </div>
 <a id="a2b9bf0c841e5f76611dfbd5bc585c424" name="a2b9bf0c841e5f76611dfbd5bc585c424"></a>
@@ -327,7 +454,7 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Seconds. </p>
+<p>How many seconds of no user input before the attract state is triggered. </p>
 
 </div>
 </div>
@@ -342,6 +469,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Managed by this class monitoring user input. </p>
 
 </div>
 </div>
@@ -358,6 +487,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after user input is detected, when the attract state is ending. </p>
+
 </div>
 </div>
 <a id="a7c930f84025b3dfd31033d7e7eeda0d7" name="a7c930f84025b3dfd31033d7e7eeda0d7"></a>
@@ -372,6 +503,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked when the attract state has begun. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -383,7 +516,7 @@ Events</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html">AttractTimeout</a></li>
-    <li class="footer">Generated on Fri Jul 24 2026 12:48:49 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Jul 24 2026 13:48:51 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,12 @@
 var classrlmg_1_1_tools_1_1_core_1_1_attract_timeout =
 [
-    [ "Dismiss", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#abd78bce2810ef29c11a23045c35ce188", null ],
-    [ "ForceTimeout", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#adcd3893a54ba48308db7feefa182e501", null ],
+    [ "Dismiss", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ad21ccd56cbbfbe9e64f7ac65fab81d98", null ],
+    [ "ForceDismiss", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6f9783ea2d31b64036c9fb8dca85fff8", null ],
+    [ "ForceTimeout", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a8b0509f8a475ff40e0b75b6e3bf97387", null ],
+    [ "OnDismiss", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af9f3dad13fc92f8663f8d51bbfb42297", null ],
+    [ "OnTimeout", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2e90901e133a7a1735baad5ff45c6822", null ],
     [ "ResetTimer", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a7cda293c7819437166d3c916ac25ad44", null ],
-    [ "Timeout", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a99bb9ca5a602ff309aa1927f1f046627", null ],
+    [ "Timeout", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a4d98cb088bf76e3aee9de00c16a6156b", null ],
     [ "Update", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6c3ed3b55a214f252c89e10fcfa65fb5", null ],
     [ "anyClick", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#aa9e676645d22b9889215a8e6330c07ee", null ],
     [ "DoCount", "classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#ae1f38a69b1fe6811c329d2112d86fcdb", null ],
