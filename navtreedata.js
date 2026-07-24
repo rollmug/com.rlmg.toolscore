@@ -24,12 +24,36 @@
 */
 var NAVTREE =
 [
-  [ "RLMG Tools - Core", "index.html", ]
+  [ "RLMG Tools - Core", "index.html", [
+    [ "Packages", "namespaces.html", [
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Properties", "functions_prop.html", null ],
+        [ "Events", "functions_evnt.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_app_manager_8cs.html",
+"classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#abc883bf5efe0ed7d1e60c3fadd905731"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
