@@ -12,6 +12,10 @@
     "com.rlmg.toolsmediaplayers": "0.1.0",
     "com.unity.nuget.newtonsoft-json": "3.2.2"
   },
+  "gitDependencies": {
+    "com.rlmg.toolscontentloading": "0.2.1",
+    "com.rlmg.toolsmediaplayers": "0.1.0"
+  },
   "author": {
     "name": "RLMG",
     "url": "http://www.rlmg.com",
