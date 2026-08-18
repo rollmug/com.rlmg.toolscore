@@ -13,8 +13,8 @@
     "com.unity.nuget.newtonsoft-json": "3.2.2"
   },
   "gitDependencies": {
-    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git#0.2.1",
-    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git#0.1.0"
+    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git",
+    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git#git-dependency-resolver"
   },
   "author": {
     "name": "RLMG",
