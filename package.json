@@ -8,13 +8,11 @@
   "dependencies": {
     "com.unity.test-framework": "1.6.0",
     "com.unity.textmeshpro": "3.0.6",
-    "com.rlmg.toolscontentloading": "0.2.1",
-    "com.rlmg.toolsmediaplayers": "0.1.0",
     "com.unity.nuget.newtonsoft-json": "3.2.2"
   },
   "gitDependencies": {
-    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git",
-    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git"
+    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git#0.2.1",
+    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git#0.1.0"
   },
   "author": {
     "name": "RLMG",
