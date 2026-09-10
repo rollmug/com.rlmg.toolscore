@@ -1,5 +1,6 @@
 namespace rlmg.Tools.Core
 {
+    using Codice.CM.SEIDInfo;
     using UnityEngine;
 
     /// <summary>
@@ -21,7 +22,7 @@ namespace rlmg.Tools.Core
             {
                 if (applicationIsQuitting)
                 {
-                    Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+                    Debug.LogWarning("[Singleton: " + typeof(T) + "] Instance '" + typeof(T) +
                         "' already destroyed on application quit." +
                         " Won't create again - returning null.");
                     return null;
@@ -33,11 +34,9 @@ namespace rlmg.Tools.Core
                     {
                         _instance = (T)FindAnyObjectByType(typeof(T));
 
-                        if (FindObjectsByType(
-                            typeof(T),
-                            FindObjectsSortMode.None).Length > 1)
+                        if (FindObjectsByType<T>().Length > 1)
                         {
-                            Debug.LogError("[Singleton] Something went really wrong " +
+                            Debug.LogError("[Singleton: " + typeof(T) + "] Something went really wrong " +
                                 " - there should never be more than 1 singleton!" +
                                 " Reopening the scene might fix it.");
                             return _instance;
@@ -51,13 +50,18 @@ namespace rlmg.Tools.Core
 
                             DontDestroyOnLoad(singleton);
 
-                            Debug.Log("[Singleton] An instance of " + typeof(T) +
+                            Debug.Log("[Singleton: " + typeof(T) + "] An instance of " + typeof(T) +
                                 " is needed in the scene, so '" + singleton +
                                 "' was created with DontDestroyOnLoad.");
                         }
                         else
                         {
-                            Debug.Log("[Singleton] Using instance already created: " +
+                            if (_instance.gameObject.scene.name != "DontDestroyOnLoad")
+                            {
+                                DontDestroyOnLoad(_instance.gameObject);
+                            }
+
+                            Debug.Log("[Singleton: " + typeof(T) + "] Setting singleton instance field. Using instance already created on gameobject: " +
                                 _instance.gameObject.name);
                         }
                     }
@@ -67,7 +71,17 @@ namespace rlmg.Tools.Core
             }
         }
 
-        private static bool applicationIsQuitting = false;
+        protected static bool applicationIsQuitting = false;
+
+        protected virtual void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this); // component only
+                return;
+            }
+        }
+        
         /// <summary>
         /// When Unity quits, it destroys objects in a random order.
         /// In principle, a Singleton is only destroyed when application quits.
@@ -78,7 +92,8 @@ namespace rlmg.Tools.Core
         /// </summary>
         public void OnDestroy()
         {
-            applicationIsQuitting = true;
+            if (Instance == null || Instance == this)
+                applicationIsQuitting = true;
         }
     }
 }
