@@ -19,17 +19,26 @@ namespace rlmg.Tools.Core
         [SerializeField]
         protected AppManager appManager;
 
+        [SerializeField]
+        protected bool doAutoFindAppManager = true;
+
         /// <summary>
         /// Optionally present AttractVideoPlayer instance, which this will configure.
         /// </summary>
         [SerializeField]
         protected AttractVideoPlayer attractVideoPlayer;
 
+        [SerializeField]
+        protected bool doAutoFindAttractVideoPlayer = true;
+
         /// <summary>
         /// Optionally present AttractTimeout instances, which this will configure.
         /// </summary>
         [SerializeField]
         protected AttractTimeout[] attractTimeouts;
+
+        [SerializeField]
+        protected bool doAutoFindAttractTimeouts = true;
 
         /// <summary>
         /// The configuration data loaded
@@ -38,14 +47,15 @@ namespace rlmg.Tools.Core
 
         protected override void Awake()
         {
-            if (appManager == null)
+            if (appManager == null && doAutoFindAppManager)
                 appManager = FindAnyObjectByType<AppManager>();
 
-            if (attractVideoPlayer == null)
+            if (attractVideoPlayer == null && doAutoFindAttractVideoPlayer)
                 attractVideoPlayer = FindAnyObjectByType<AttractVideoPlayer>();
 
-            if (attractTimeouts == null ||
-                attractTimeouts.Length == 0)
+            if ((attractTimeouts == null ||
+                attractTimeouts.Length == 0) &&
+                doAutoFindAttractTimeouts)
                 attractTimeouts = FindObjectsByType<AttractTimeout>(FindObjectsSortMode.InstanceID);
 
             base.Awake();
@@ -62,28 +72,36 @@ namespace rlmg.Tools.Core
             // Using Newtonsoft to support nullable types
             Data = JsonConvert.DeserializeObject<RLMGConfigData>(webRequest.downloadHandler.text);
 
-            if (Data == null)
-                yield break;
+            if (Data != null)
+                ApplyConfigData(Data);
 
-            if (Data.loggerConfig != null)
-                RLMGLogger.Instance.Configure(Data.loggerConfig);
+            yield break;
+        }
+
+        /// <summary>
+        /// Applies loaded config data to the logger, attract and app manager components in RLMG Core.
+        /// </summary>
+        protected virtual void ApplyConfigData(RLMGConfigData data)
+        {
+            if (data.loggerConfig != null)
+                RLMGLogger.Instance.Configure(data.loggerConfig);
 
             if (appManager != null &&
-                Data.appManagerConfig != null)
+                data.appManagerConfig != null)
             {
-                appManager.Configure(Data.appManagerConfig);
+                appManager.Configure(data.appManagerConfig);
             }
 
             if (attractVideoPlayer != null &&
-                !string.IsNullOrEmpty(Data.attractPath))
+                !string.IsNullOrEmpty(data.attractPath))
             {
                 attractVideoPlayer.LoadVideo(
-                    Data.attractPath);
+                    data.attractPath);
             }
 
             if (attractTimeouts != null)
                 foreach (var t in attractTimeouts)
-                    t.TimeoutDuration = Data.attractTimeoutDuration;
+                    t.TimeoutDuration = data.attractTimeoutDuration;
         }
     }
 

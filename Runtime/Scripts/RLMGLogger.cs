@@ -335,8 +335,10 @@ namespace rlmg.Tools.Core
         /// <summary>
         /// Invokes Setup
         /// </summary>
-        protected virtual void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             Setup();
         }
 
@@ -642,6 +644,14 @@ namespace rlmg.Tools.Core
                     return;
             }
         }
+
+        #region Button Click Handlers
+        public void OnLogClicked(string message) => LogMessage(LogType.Log, message);
+
+        public void OnLogWarningClicked(string message) => LogMessage(LogType.Warning, message);
+
+        public void OnLogErrorClicked(string message) => LogMessage(LogType.Error, message);
+        #endregion
 
 
     }
