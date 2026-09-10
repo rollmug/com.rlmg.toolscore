@@ -8,6 +8,9 @@ var searchData=
   ['ondismiss_5',['OnDismiss',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af9f3dad13fc92f8663f8d51bbfb42297',1,'rlmg::Tools::Core::AttractTimeout']]],
   ['onenable_6',['OnEnable',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ab210ebbc298f99eaef36dcd0df054739',1,'rlmg.Tools.Core.AttractVideoPlayer.OnEnable()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afe9fdd17e91bcbccb331e36153332b50',1,'rlmg.Tools.Core.RLMGLogger.OnEnable()']]],
   ['onlocalsuccess_7',['OnLocalSuccess',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a04e6e5f4ec290bac6a2d84b27bda145e',1,'rlmg::Tools::Core::RLMGConfigLoader']]],
-  ['ontimeout_8',['OnTimeout',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2e90901e133a7a1735baad5ff45c6822',1,'rlmg::Tools::Core::AttractTimeout']]],
-  ['onvideoplayerprepared_9',['OnVideoPlayerPrepared',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#add0edb991edc89998777d2e53ffe5671',1,'rlmg::Tools::Core::AttractVideoPlayer']]]
+  ['onlogclicked_8',['OnLogClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a795d2327ee8b696a265082212d15fc6a',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['onlogerrorclicked_9',['OnLogErrorClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a01f9272a0156c179be8c5f3b4aa0d518',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['onlogwarningclicked_10',['OnLogWarningClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#af597296db3994015ab21e0f21487ef80',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['ontimeout_11',['OnTimeout',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2e90901e133a7a1735baad5ff45c6822',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['onvideoplayerprepared_12',['OnVideoPlayerPrepared',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#add0edb991edc89998777d2e53ffe5671',1,'rlmg::Tools::Core::AttractVideoPlayer']]]
 ];
