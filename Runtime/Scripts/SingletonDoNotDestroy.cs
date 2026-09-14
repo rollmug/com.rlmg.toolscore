@@ -34,7 +34,7 @@ namespace rlmg.Tools.Core
                     {
                         _instance = (T)FindAnyObjectByType(typeof(T));
 
-                        if (FindObjectsByType<T>().Length > 1)
+                        if (FindObjectsByType<T>(FindObjectsInactive.Include).Length > 1)
                         {
                             Debug.LogError("[Singleton: " + typeof(T) + "] Something went really wrong " +
                                 " - there should never be more than 1 singleton!" +
