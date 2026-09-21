@@ -1,7 +1,7 @@
 {
   "name": "com.rlmg.toolscore",
   "displayName": "RLMG Tools - Core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "unity": "6000.3",
   "unityRelease": "13f1",
   "description": "A set of Monobehaviours and static Utility classes for Rollmuggers to use for essential app management Unity.",
@@ -9,8 +9,8 @@
     "com.unity.test-framework": "1.6.0",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.nuget.newtonsoft-json": "3.2.2",
-    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git#0.3.0",
-    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git#0.1.0"
+    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git",
+    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git"
   },
   "author": {
     "name": "RLMG",

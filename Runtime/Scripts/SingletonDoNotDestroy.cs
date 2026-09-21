@@ -34,8 +34,13 @@ namespace rlmg.Tools.Core
                     {
                         _instance = (T)FindAnyObjectByType(typeof(T));
 
+# if UNITY_5_OR_NEWER
                         if (FindObjectsByType<T>(FindObjectsInactive.Include).Length > 1)
                         {
+# else
+                        if (FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length > 1)
+                        {
+# endif
                             Debug.LogError("[Singleton: " + typeof(T) + "] Something went really wrong " +
                                 " - there should never be more than 1 singleton!" +
                                 " Reopening the scene might fix it.");

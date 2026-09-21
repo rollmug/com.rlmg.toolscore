@@ -1,0 +1,20 @@
+{
+  "appManagerConfig": {
+      "displays": [
+      {
+        "dimensions": {
+          "x": 1920,
+          "y": 1080
+        },
+        "doFullScreen":  true
+      }
+    ],
+    "targetFrameRate": 30
+  },
+  "attractPath": "",
+  "attractTimeoutDuration": 6,
+  "loggerConfig": {
+    "logLevel": "verbose",
+    "logLocation": "streaming assets"
+  }
+}
