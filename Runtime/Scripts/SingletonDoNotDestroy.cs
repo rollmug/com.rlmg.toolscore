@@ -1,6 +1,5 @@
 namespace rlmg.Tools.Core
 {
-    using Codice.CM.SEIDInfo;
     using UnityEngine;
 
     /// <summary>

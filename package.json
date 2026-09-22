@@ -9,8 +9,8 @@
     "com.unity.test-framework": "1.6.0",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.nuget.newtonsoft-json": "3.2.2",
-    "com.rlmg.toolscontentloading": "https://github.com/rollmug/com.rlmg.toolscontentloading.git",
-    "com.rlmg.toolsmediaplayers": "https://github.com/rollmug/com.rlmg.toolsmediaplayers.git"
+    "com.rlmg.toolscontentloading": "0.3.1",
+    "com.rlmg.toolsmediaplayers": "0.1.1"
   },
   "author": {
     "name": "RLMG",
