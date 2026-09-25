@@ -1,6 +1,7 @@
 namespace rlmg.Tools.Core
 {
-    using Codice.CM.SEIDInfo;
+    using System.Collections;
+    using System.Linq;
     using UnityEngine;
 
     /// <summary>
@@ -16,58 +17,74 @@ namespace rlmg.Tools.Core
 
         private static object _lock = new object();
 
+        protected static bool applicationIsQuitting = false;
+
         public static T Instance
         {
             get
             {
-                if (applicationIsQuitting)
-                {
-                    Debug.LogWarning("[Singleton: " + typeof(T) + "] Instance '" + typeof(T) +
-                        "' already destroyed on application quit." +
-                        " Won't create again - returning null.");
-                    return null;
-                }
-
                 lock (_lock)
                 {
+                    if (applicationIsQuitting)
+                    {
+                        Debug.LogWarning("[Singleton: " + typeof(T) + "] Instance '" + typeof(T) +
+                            "' already destroyed on application quit." +
+                            " Won't create again - returning null.");
+
+                        return null;
+                    }
+
                     if (_instance == null)
                     {
                         _instance = (T)FindAnyObjectByType(typeof(T));
 
-# if UNITY_5_OR_NEWER
-                        if (FindObjectsByType<T>(FindObjectsInactive.Include).Length > 1)
-                        {
-# else
-                        if (FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length > 1)
-                        {
-# endif
-                            Debug.LogError("[Singleton: " + typeof(T) + "] Something went really wrong " +
-                                " - there should never be more than 1 singleton!" +
-                                " Reopening the scene might fix it.");
-                            return _instance;
-                        }
-
                         if (_instance == null)
                         {
+                            // No GameObject with this component in the scene; create one:
+
                             GameObject singleton = new GameObject();
                             _instance = singleton.AddComponent<T>();
                             singleton.name = "(singleton) " + typeof(T).ToString();
 
                             DontDestroyOnLoad(singleton);
 
-                            Debug.Log("[Singleton: " + typeof(T) + "] An instance of " + typeof(T) +
-                                " is needed in the scene, so '" + singleton +
-                                "' was created with DontDestroyOnLoad.");
+                            Debug.Log($"[Singleton: {typeof(T)}] An instance of '{typeof(T)}' is needed in the scene, so '{singleton}' was created with DontDestroyOnLoad.");
+
+                            return _instance;
                         }
                         else
                         {
+                            if (_instance.transform.parent != null)
+                            {
+                                _instance.transform.SetParent(null);
+                            }
+
                             if (_instance.gameObject.scene.name != "DontDestroyOnLoad")
                             {
                                 DontDestroyOnLoad(_instance.gameObject);
                             }
 
-                            Debug.Log("[Singleton: " + typeof(T) + "] Setting singleton instance field. Using instance already created on gameobject: " +
-                                _instance.gameObject.name);
+                            Debug.Log($"[Singleton: {typeof(T)}] Setting singleton instance field. Using instance already created on gameobject: {_instance.gameObject.name}.");
+                        }
+
+                        T[] allFoundInstances;
+
+# if UNITY_5_OR_NEWER
+                        allFoundInstances = FindObjectsByType<T>(FindObjectsInactive.Include);
+# else
+                        allFoundInstances = FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+# endif
+                        if (allFoundInstances.Length > 1)
+                        {
+                            System.Collections.Generic.IEnumerable<T> allFoundExceptCurrent = allFoundInstances.Where(i => i != _instance);
+
+                            Debug.LogWarning(
+                                $"[Singleton: {typeof(T)}] Multiple instances ({allFoundInstances.Length}) found. Instances on the following gameobjects will be destroyed:\n" +
+                                string.Join("\n",allFoundExceptCurrent.Select(i => i.gameObject.name))
+                            );
+
+                            foreach (T i in allFoundExceptCurrent)
+                                Destroy(i); // component only
                         }
                     }
 
@@ -76,15 +93,10 @@ namespace rlmg.Tools.Core
             }
         }
 
-        protected static bool applicationIsQuitting = false;
-
         protected virtual void Awake()
         {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(this); // component only
-                return;
-            }
+            // run the getter
+            _ = Instance;
         }
         
         /// <summary>
@@ -95,10 +107,12 @@ namespace rlmg.Tools.Core
         ///   even after stopping playing the Application. Really bad!
         /// So, this was made to be sure we're not creating that buggy ghost object.
         /// </summary>
-        public void OnDestroy()
+        public void OnApplicationQuit()
         {
-            if (Instance == null || Instance == this)
+            lock (_lock)
+            {
                 applicationIsQuitting = true;
+            }
         }
     }
 }
