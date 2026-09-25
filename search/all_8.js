@@ -14,8 +14,8 @@ var searchData=
   ['loggerconfig_11',['loggerConfig',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html#a98d1204e554d4cc49c706520036b475c',1,'rlmg::Tools::Core::RLMGConfigData']]],
   ['loglevel_12',['LogLevel',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a6b4b5d5d153fdec7740077797aee3399',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
   ['loglevel_13',['logLevel',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#abc883bf5efe0ed7d1e60c3fadd905731',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
-  ['loglocation_14',['LogLocation',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a465728c520b7c4a82b35449aab0dabfc',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
-  ['loglocation_15',['logLocation',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a2cb736c0b576de6c1584c81bcb01acd8',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
+  ['loglocation_14',['logLocation',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a2cb736c0b576de6c1584c81bcb01acd8',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
+  ['loglocation_15',['LogLocation',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a465728c520b7c4a82b35449aab0dabfc',1,'rlmg::Tools::Core::RLMGLoggerConfigurationData']]],
   ['logmessage_16',['LogMessage',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ad4008c3da838a2e4bb9f2ab4383dda6e',1,'rlmg::Tools::Core::RLMGLogger']]],
   ['logwarning_17',['LogWarning',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a13ddf806a24d1a31944e21386cdd0212',1,'rlmg::Tools::Core::RLMGLogger']]]
 ];
