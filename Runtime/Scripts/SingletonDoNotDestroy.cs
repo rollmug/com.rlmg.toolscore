@@ -93,10 +93,37 @@ namespace rlmg.Tools.Core
             }
         }
 
+        private void DestroyDuplicateInstances()
+        {
+            T[] allFoundInstances;
+
+# if UNITY_5_OR_NEWER
+            allFoundInstances = FindObjectsByType<T>(FindObjectsInactive.Include);
+# else
+            allFoundInstances = FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+# endif
+            if (allFoundInstances.Length > 1)
+            {
+                System.Collections.Generic.IEnumerable<T> allFoundExceptCurrent = allFoundInstances.Where(i => i != _instance);
+
+                Debug.LogWarning(
+                    $"[Singleton: {typeof(T)}] Multiple instances ({allFoundInstances.Length}) found. Instances on the following gameobjects will be destroyed:\n" +
+                    string.Join("\n",allFoundExceptCurrent.Select(i => i.gameObject.name))
+                );
+
+                foreach (T i in allFoundExceptCurrent)
+                    Destroy(i); // component only
+            }
+        }
+
         protected virtual void Awake()
         {
             // run the getter
-            _ = Instance;
+            var instance = Instance;
+
+            if (instance != null)
+                DestroyDuplicateInstances();
+
         }
         
         /// <summary>
@@ -107,7 +134,7 @@ namespace rlmg.Tools.Core
         ///   even after stopping playing the Application. Really bad!
         /// So, this was made to be sure we're not creating that buggy ghost object.
         /// </summary>
-        public void OnApplicationQuit()
+        protected virtual void OnApplicationQuit()
         {
             lock (_lock)
             {
