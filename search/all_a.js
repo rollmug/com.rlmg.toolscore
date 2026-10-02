@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['onapplicationquit_0',['OnApplicationQuit',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a5f6f4e8131b2c7b2e6a3d1a68273d1ca',1,'rlmg.Tools.Core.AppManager.OnApplicationQuit()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a3c79c4aac7fee734f6eaaa2f31a71c20',1,'rlmg.Tools.Core.SingletonDoNotDestroy.OnApplicationQuit()']]],
+  ['onapplicationquit_0',['OnApplicationQuit',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a5f6f4e8131b2c7b2e6a3d1a68273d1ca',1,'rlmg.Tools.Core.AppManager.OnApplicationQuit()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a6fb5974e1dcb0b1723f8f9d438323092',1,'rlmg.Tools.Core.SingletonDoNotDestroy.OnApplicationQuit()']]],
   ['onattractdismissed_1',['OnAttractDismissed',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a349ac75535de2c0e89e5fadf3600aa97',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
   ['onattractstarting_2',['OnAttractStarting',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a453e4d690b66597c5eec7d326ced30db',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
   ['ondisable_3',['OnDisable',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#abbb94cbb8b4dbe4f91e82b2e631336ed',1,'rlmg.Tools.Core.AttractVideoPlayer.OnDisable()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea02ab50d2599a12b4788db60d3c3585',1,'rlmg.Tools.Core.RLMGLogger.OnDisable()']]],
