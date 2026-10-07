@@ -67,7 +67,7 @@ namespace rlmg.Tools.Core
     /// 2. Monitors key commands to exit the app and show the cursor, and
     /// 3. Sets up input and output features of the Unity game engine.
     /// </summary>
-    public class AppManager : MonoBehaviour
+    public class AppManager : SingletonDoNotDestroy<AppManager>
     {
         /// <summary>
         /// An empty list will do no override from what's set in the inspector.
