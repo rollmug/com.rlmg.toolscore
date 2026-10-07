@@ -10,7 +10,8 @@ var searchData=
   ['singleton_2ecs_7',['Singleton.cs',['../_singleton_8cs.html',1,'']]],
   ['singletondonotdestroy_8',['SingletonDoNotDestroy',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
   ['singletondonotdestroy_2ecs_9',['SingletonDoNotDestroy.cs',['../_singleton_do_not_destroy_8cs.html',1,'']]],
-  ['singletondonotdestroy_3c_20rlmglogger_20_3e_10',['SingletonDoNotDestroy&lt; RLMGLogger &gt;',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
-  ['start_11',['Start',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a799eead6bbb501134862222b899f8e65',1,'rlmg::Tools::Core::AppManager']]],
-  ['streamingassets_12',['StreamingAssets',['../namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893a0b38d14680695e16fe6e41b1959921d0',1,'rlmg::Tools::Core']]]
+  ['singletondonotdestroy_3c_20appmanager_20_3e_10',['SingletonDoNotDestroy&lt; AppManager &gt;',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
+  ['singletondonotdestroy_3c_20rlmglogger_20_3e_11',['SingletonDoNotDestroy&lt; RLMGLogger &gt;',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
+  ['start_12',['Start',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a799eead6bbb501134862222b899f8e65',1,'rlmg::Tools::Core::AppManager']]],
+  ['streamingassets_13',['StreamingAssets',['../namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893a0b38d14680695e16fe6e41b1959921d0',1,'rlmg::Tools::Core']]]
 ];
