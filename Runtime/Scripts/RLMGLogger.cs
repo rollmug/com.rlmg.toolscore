@@ -1,3 +1,5 @@
+using UnityEngine.InputSystem.EnhancedTouch;
+
 namespace rlmg.Tools.Core
 {
     using System;
@@ -333,13 +335,40 @@ namespace rlmg.Tools.Core
         protected string extension = ".csv";
 
         /// <summary>
-        /// Invokes Setup
+        /// Managed by this class so Setup only runs once per instance, even if Initialize is called repeatedly
+        /// (e.g. by subclasses that defer initialization until configuration is applied).
+        /// </summary>
+        private bool isInitialized = false;
+
+        /// <summary>
+        /// Whether Awake should invoke Initialize. Subclasses can override to defer initialization
+        /// (e.g. until Configure is called) and call Initialize themselves.
+        /// </summary>
+        protected virtual bool DoInitializeOnAwake => true;
+
+        /// <summary>
+        /// Invokes Initialize, unless DoInitializeOnAwake is false
         /// </summary>
         protected override void Awake()
         {
             base.Awake();
 
+            if (DoInitializeOnAwake)
+                Initialize();
+        }
+
+        /// <summary>
+        /// Invokes Setup once; subsequent calls are no-ops.
+        /// </summary>
+        protected void Initialize()
+        {
+            if (isInitialized)
+                return;
+
+            isInitialized = true;
             Setup();
+
+            LogMessage(LogType.Log, $"{gameObject.name} initialized.");
         }
 
         protected virtual void OnEnable()
@@ -437,7 +466,8 @@ namespace rlmg.Tools.Core
             }
 
             // -------- setup filepath --------
-            logFileName = logFileName + "_" + Now.Year + "-" + Now.Month + "-" + Now.Day;
+            // built in a local so logFileName stays the base name and Setup is safe to re-run
+            string fullFileName = logFileName + "_" + Now.Year + "-" + Now.Month + "-" + Now.Day;
 
             if (doLogFilePerSession)
             {
@@ -447,20 +477,21 @@ namespace rlmg.Tools.Core
                 string[] filePaths = Directory.GetFiles(logFolderPath);
                 foreach (string file in filePaths)
                 {
-                    if (file.Contains(logFileName))
+                    if (file.Contains(fullFileName) &&
+                        !file.EndsWith(".meta"))
                     {
                         // increment index
                         sessionIndex++;
                     }
                 }
 
-                logFileName += "-" + sessionIndex.ToString("D4");
+                fullFileName += "-" + sessionIndex.ToString("D4");
             }
 
             extension = logDelimiter == LogDelimiter.Comma ? ".csv" : ".tsv";
-            logFileName += extension;
+            fullFileName += extension;
 
-            logFilePath = Path.Combine(logFolderPath, logFileName);
+            logFilePath = Path.Combine(logFolderPath, fullFileName);
 
             if (!File.Exists(logFilePath))
             {
@@ -544,6 +575,9 @@ namespace rlmg.Tools.Core
             string stackTrace = null)
         {
             if (Application.isEditor && !doLogToDiskInEditor)
+                return;
+
+            if (!isInitialized)
                 return;
 
             string line = string.Join(
