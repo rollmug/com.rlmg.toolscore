@@ -1,4 +1,15 @@
 var searchData=
 [
-  ['resettimer_0',['ResetTimer',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a7cda293c7819437166d3c916ac25ad44',1,'rlmg::Tools::Core::AttractTimeout']]]
+  ['onapplicationquit_0',['OnApplicationQuit',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a5f6f4e8131b2c7b2e6a3d1a68273d1ca',1,'rlmg.Tools.Core.AppManager.OnApplicationQuit()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a6fb5974e1dcb0b1723f8f9d438323092',1,'rlmg.Tools.Core.SingletonDoNotDestroy.OnApplicationQuit()']]],
+  ['onattractdismissed_1',['OnAttractDismissed',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a349ac75535de2c0e89e5fadf3600aa97',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
+  ['onattractstarting_2',['OnAttractStarting',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a453e4d690b66597c5eec7d326ced30db',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
+  ['ondisable_3',['OnDisable',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#abbb94cbb8b4dbe4f91e82b2e631336ed',1,'rlmg.Tools.Core.AttractVideoPlayer.OnDisable()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea02ab50d2599a12b4788db60d3c3585',1,'rlmg.Tools.Core.RLMGLogger.OnDisable()']]],
+  ['ondismiss_4',['OnDismiss',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af9f3dad13fc92f8663f8d51bbfb42297',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['onenable_5',['OnEnable',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ab210ebbc298f99eaef36dcd0df054739',1,'rlmg.Tools.Core.AttractVideoPlayer.OnEnable()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afe9fdd17e91bcbccb331e36153332b50',1,'rlmg.Tools.Core.RLMGLogger.OnEnable()']]],
+  ['onlocalsuccess_6',['OnLocalSuccess',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a04e6e5f4ec290bac6a2d84b27bda145e',1,'rlmg::Tools::Core::RLMGConfigLoader']]],
+  ['onlogclicked_7',['OnLogClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a795d2327ee8b696a265082212d15fc6a',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['onlogerrorclicked_8',['OnLogErrorClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a01f9272a0156c179be8c5f3b4aa0d518',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['onlogwarningclicked_9',['OnLogWarningClicked',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#af597296db3994015ab21e0f21487ef80',1,'rlmg::Tools::Core::RLMGLogger']]],
+  ['ontimeout_10',['OnTimeout',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a2e90901e133a7a1735baad5ff45c6822',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['onvideoplayerprepared_11',['OnVideoPlayerPrepared',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#add0edb991edc89998777d2e53ffe5671',1,'rlmg::Tools::Core::AttractVideoPlayer']]]
 ];

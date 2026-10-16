@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writeline_0',['WriteLine',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a581f8f0043e9eff77d9c91994ff4b2e1',1,'rlmg::Tools::Core::RLMGLogger']]]
+  ['update_0',['Update',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#afa69337555efb8d8b8476ee79b1f7fc8',1,'rlmg.Tools.Core.AppManager.Update()'],['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a6c3ed3b55a214f252c89e10fcfa65fb5',1,'rlmg.Tools.Core.AttractTimeout.Update()']]]
 ];

@@ -3,6 +3,7 @@ var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger =
     [ "Awake", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a955906bd5f9da57df4d5bef73c54a08a", null ],
     [ "Configure", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ac4d71a00d87be6a1fe0d5ded914b6576", null ],
     [ "HandleDebugLog", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2e319e9285159c3f76d04179c2a0e7fc", null ],
+    [ "Initialize", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ab6200dc35ffacdc6f494d6973f0d3798", null ],
     [ "Log", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6028b06928c08fe4d8995aacec42b1bb", null ],
     [ "Log", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aa7e5e186ac91bf47fba46a157feed95c", null ],
     [ "LogError", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a7d65ed3b9e37d2408ad3a3c6d939200b", null ],
@@ -33,5 +34,6 @@ var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger =
     [ "logFolderPath", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6debde6d20a28184e3f7aef401d3fe15", null ],
     [ "maxDays", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a599f6fda2ab4ef383eff3ee0b06e33ec", null ],
     [ "timestampFormat", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6bcdefa86248f8476fcde4dd1d766787", null ],
-    [ "verbosity", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a66f1308cd3fd92c2dbffc1cb68e6bd08", null ]
+    [ "verbosity", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a66f1308cd3fd92c2dbffc1cb68e6bd08", null ],
+    [ "DoInitializeOnAwake", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ae4ce27fa187665cc437b616bd0e97a2d", null ]
 ];

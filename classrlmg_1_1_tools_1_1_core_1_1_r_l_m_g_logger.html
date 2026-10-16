@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_r_l_m
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">rlmg.Tools.Core.RLMGLogger Class Reference</div></div>
 </div><!--header-->
@@ -144,8 +145,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a955906bd5f9da57df4d5bef73c54a08a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a955906bd5f9da57df4d5bef73c54a08a">Awake</a> ()</td></tr>
-<tr class="memdesc:a955906bd5f9da57df4d5bef73c54a08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes Setup.  <br /></td></tr>
+<tr class="memdesc:a955906bd5f9da57df4d5bef73c54a08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes Initialize, unless DoInitializeOnAwake is false.  <br /></td></tr>
 <tr class="separator:a955906bd5f9da57df4d5bef73c54a08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6200dc35ffacdc6f494d6973f0d3798"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ab6200dc35ffacdc6f494d6973f0d3798">Initialize</a> ()</td></tr>
+<tr class="memdesc:ab6200dc35ffacdc6f494d6973f0d3798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes Setup once; subsequent calls are no-ops.  <br /></td></tr>
+<tr class="separator:ab6200dc35ffacdc6f494d6973f0d3798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe9fdd17e91bcbccb331e36153332b50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afe9fdd17e91bcbccb331e36153332b50">OnEnable</a> ()</td></tr>
 <tr class="separator:afe9fdd17e91bcbccb331e36153332b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea02ab50d2599a12b4788db60d3c3585"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#aea02ab50d2599a12b4788db60d3c3585">OnDisable</a> ()</td></tr>
@@ -226,14 +230,20 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a8c346ca4f1bcced2fc49209e21ceee28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed by this class for choosing log file extension once.  <br /></td></tr>
 <tr class="separator:a8c346ca4f1bcced2fc49209e21ceee28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:ae4ce27fa187665cc437b616bd0e97a2d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ae4ce27fa187665cc437b616bd0e97a2d">DoInitializeOnAwake</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae4ce27fa187665cc437b616bd0e97a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether Awake should invoke Initialize.  <br /></td></tr>
+<tr class="separator:ae4ce27fa187665cc437b616bd0e97a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td colspan="2" onclick="javascript:toggleInherit('properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy&lt; RLMGLogger &gt;</a></td></tr>
+<tr class="memitem:a272ac158e638b186d883fba6f2479a62 inherit properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a272ac158e638b186d883fba6f2479a62">Instance</a><code> [get]</code></td></tr>
+<tr class="separator:a272ac158e638b186d883fba6f2479a62 inherit properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_attribs_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy&lt; RLMGLogger &gt;</a></td></tr>
 <tr class="memitem:a1597da07b77d208335a79bcc50f60af6 inherit pro_static_attribs_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a1597da07b77d208335a79bcc50f60af6">applicationIsQuitting</a></td></tr>
 <tr class="separator:a1597da07b77d208335a79bcc50f60af6 inherit pro_static_attribs_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td colspan="2" onclick="javascript:toggleInherit('properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy&lt; RLMGLogger &gt;</a></td></tr>
-<tr class="memitem:a272ac158e638b186d883fba6f2479a62 inherit properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a272ac158e638b186d883fba6f2479a62">Instance</a><code> [get]</code></td></tr>
-<tr class="separator:a272ac158e638b186d883fba6f2479a62 inherit properties_classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The popular RLMGLogger singleton. </p>
@@ -267,7 +277,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Invokes Setup. </p>
+<p>Invokes Initialize, unless DoInitializeOnAwake is false. </p>
 
 <p>Reimplemented from <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#aaad894033509d4095aabdcc16625bee1">rlmg.Tools.Core.SingletonDoNotDestroy&lt; RLMGLogger &gt;</a>.</p>
 
@@ -356,6 +366,33 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab6200dc35ffacdc6f494d6973f0d3798" name="ab6200dc35ffacdc6f494d6973f0d3798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6200dc35ffacdc6f494d6973f0d3798">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rlmg.Tools.Core.RLMGLogger.Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invokes Setup once; subsequent calls are no-ops. </p>
 
 </div>
 </div>
@@ -1244,6 +1281,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ae4ce27fa187665cc437b616bd0e97a2d" name="ae4ce27fa187665cc437b616bd0e97a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ce27fa187665cc437b616bd0e97a2d">&#9670;&#160;</a></span>DoInitializeOnAwake</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool rlmg.Tools.Core.RLMGLogger.DoInitializeOnAwake</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether Awake should invoke Initialize. </p>
+<p>Subclasses can override to defer initialization (e.g. until Configure is called) and call Initialize themselves. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Runtime/Scripts/<a class="el" href="_r_l_m_g_logger_8cs.html">RLMGLogger.cs</a></li>
 </ul>
@@ -1253,7 +1316,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html">RLMGLogger</a></li>
-    <li class="footer">Generated on Wed Oct 7 2026 20:10:19 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Fri Oct 16 2026 16:13:25 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
