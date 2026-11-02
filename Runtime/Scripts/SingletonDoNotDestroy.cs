@@ -1,6 +1,5 @@
 namespace rlmg.Tools.Core
 {
-    using System.Collections;
     using System.Linq;
     using UnityEngine;
 
@@ -17,21 +16,15 @@ namespace rlmg.Tools.Core
 
         private static object _lock = new object();
 
-        protected static bool applicationIsQuitting = false;
-
         public static T Instance
         {
             get
             {
                 lock (_lock)
                 {
-                    if (applicationIsQuitting)
+                    if (AppQuitCheck.IsQuitting)
                     {
-                        Debug.LogWarning("[Singleton: " + typeof(T) + "] Instance '" + typeof(T) +
-                            "' already destroyed on application quit." +
-                            " Won't create again - returning null.");
-
-                        return null;
+                        return _instance;
                     }
 
                     if (_instance == null)
@@ -78,7 +71,7 @@ namespace rlmg.Tools.Core
                         {
                             System.Collections.Generic.IEnumerable<T> allFoundExceptCurrent = allFoundInstances.Where(i => i != _instance);
 
-                            Debug.LogWarning(
+                            Debug.Log(
                                 $"[Singleton: {typeof(T)}] Multiple instances ({allFoundInstances.Length}) found. Instances on the following gameobjects will be destroyed:\n" +
                                 string.Join("\n",allFoundExceptCurrent.Select(i => i.gameObject.name))
                             );
@@ -90,6 +83,14 @@ namespace rlmg.Tools.Core
 
                     return _instance;
                 }
+            }
+        }
+
+        public static bool HasInstance()
+        {
+            lock (_lock)
+            {
+                return _instance != null;
             }
         }
 
@@ -106,7 +107,7 @@ namespace rlmg.Tools.Core
             {
                 System.Collections.Generic.IEnumerable<T> allFoundExceptCurrent = allFoundInstances.Where(i => i != _instance);
 
-                Debug.LogWarning(
+                Debug.Log(
                     $"[Singleton: {typeof(T)}] Multiple instances ({allFoundInstances.Length}) found. Instances on the following gameobjects will be destroyed:\n" +
                     string.Join("\n",allFoundExceptCurrent.Select(i => i.gameObject.name))
                 );
@@ -123,7 +124,6 @@ namespace rlmg.Tools.Core
 
             if (instance != null)
                 DestroyDuplicateInstances();
-
         }
         
         /// <summary>
@@ -133,13 +133,11 @@ namespace rlmg.Tools.Core
         ///   it will create a buggy ghost object that will stay on the Editor scene
         ///   even after stopping playing the Application. Really bad!
         /// So, this was made to be sure we're not creating that buggy ghost object.
+        /// In the Editor, <see cref="AppQuitCheck"/> has already set the flag by now; this covers builds.
         /// </summary>
         protected virtual void OnApplicationQuit()
         {
-            lock (_lock)
-            {
-                applicationIsQuitting = true;
-            }
+            AppQuitCheck.MarkQuitting();
         }
     }
 }

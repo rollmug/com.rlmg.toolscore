@@ -128,18 +128,21 @@ namespace rlmg.Tools.Core
         /// Computed property that converts the string-based logLevel into the
         /// corresponding <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a>. Returns null if not parseable.
         /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
         public LogType? LogLevel => GetLogType(logLevel);
 
         /// <summary>
         /// Computed property that converts the string-based logLocation into the
         /// corresponding LogDestinationPath enum. Returns null if not parseable.
         /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
         public LogDestinationPath? LogLocation => GetLogDestinationPath(logLocation);
 
         /// <summary>
         /// Computed property that converts the string-based debugLogLevel into
         /// the corresponding UnityEngine.LogType. Returns null if not parseable.
         /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
         public LogType? DebugLogLevel => GetLogType(debugLogLevel);
 
         /// <summary>
@@ -148,7 +151,7 @@ namespace rlmg.Tools.Core
         /// </summary>
         /// <param name="logtype">representation of log level / verbosity</param>
         /// <returns>Nullable native <a href="https://docs.unity3d.com/6000.3/Documentation/ScriptReference/LogType.html">UnityEngine.LogType</a> enum</returns>
-        public LogType? GetLogType(string logtype)
+        public static LogType? GetLogType(string logtype)
         {
             if (logtype == null)
                 return null;
@@ -185,7 +188,7 @@ namespace rlmg.Tools.Core
         /// </summary>
         /// <param name="locationName">representation of log location / folder name</param>
         /// <returns>Nullable LogDestinationPath enum</returns>
-        public LogDestinationPath? GetLogDestinationPath(string locationName)
+        public static LogDestinationPath? GetLogDestinationPath(string locationName)
         {
             if (locationName == null)
                 return null;
@@ -274,6 +277,13 @@ namespace rlmg.Tools.Core
         [SerializeField]
         protected bool doLogToDiskInEditor = false;
 
+        /// <summary>
+        /// If true, initialization is deferred from Awake until Configure is called.
+        /// </summary>
+        [SerializeField]
+        [Tooltip("If true, initialization is deferred from Awake until Configure is called.")]
+        protected bool doWaitForConfigToInit = false;
+
         [Header("File Management")]
         /// <summary>
         /// Max days file will be saved before purging. 0 = never delete
@@ -341,10 +351,11 @@ namespace rlmg.Tools.Core
         private bool isInitialized = false;
 
         /// <summary>
-        /// Whether Awake should invoke Initialize. Subclasses can override to defer initialization
-        /// (e.g. until Configure is called) and call Initialize themselves.
+        /// Whether Awake should invoke Initialize. When waiting for config, initialization is deferred
+        /// to <see cref="Configure"/>. Subclasses can override to defer initialization otherwise and
+        /// call Initialize themselves.
         /// </summary>
-        protected virtual bool DoInitializeOnAwake => true;
+        protected virtual bool DoInitializeOnAwake => !doWaitForConfigToInit;
 
         /// <summary>
         /// Invokes Initialize, unless DoInitializeOnAwake is false
@@ -425,6 +436,33 @@ namespace rlmg.Tools.Core
 
             if (data.doLogDebugStackTrace != null)
                 doLogDebugStackTrace = (bool)data.doLogDebugStackTrace;
+
+            if (doWaitForConfigToInit)
+                Initialize();
+        }
+
+        /// <summary>
+        /// The complement to <see cref="Configure"/>: configuration data holding this instance's current
+        /// settings. The string-based fields are filled in too, consistent with their enum counterparts,
+        /// so either reads correctly when the data is applied again.
+        /// </summary>
+        public virtual RLMGLoggerConfigurationData GetCurrentConfigurationData()
+        {
+            return new RLMGLoggerConfigurationData
+            {
+                logLevel = verbosity.ToString().ToLowerInvariant(),
+                logLocation = destPath.ToString().ToLowerInvariant(),
+                verbosity = verbosity,
+                logDestinationPath = destPath,
+                logFolderName = logFolderName,
+                logFileName = logFileName,
+                maxDays = maxDays,
+                doLogFilePerSession = doLogFilePerSession,
+                doLogDebugLogs = doLogDebugLogs,
+                debugLogLevel = debugLogVerbosity.ToString().ToLowerInvariant(),
+                debugLogVerbosity = debugLogVerbosity,
+                doLogDebugStackTrace = doLogDebugStackTrace,
+            };
         }
 
         /// <summary>

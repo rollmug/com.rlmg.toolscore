@@ -26,32 +26,37 @@ namespace rlmg.Tools.Core.Examples.Editor
 
             if (!Directory.Exists(sourcePath)) return;
 
-            // 3. Perform copy if not already copied (prevents repeating every assembly reload)
-            if (!Directory.Exists(destPath))
-            {
-                Directory.CreateDirectory(destPath);
-                CopyFilesRecursively(sourcePath, destPath);
+            // 3. Copy only files not already there - so nothing is repeated every assembly reload, local
+            // edits are never overwritten, and files a newer sample version adds (or moves into a
+            // subdirectory) still arrive in a previously imported destination
+            int copiedCount = CopyMissingFilesRecursively(sourcePath, destPath);
 
+            if (copiedCount > 0)
+            {
                 // Refresh the AssetDatabase so Unity acknowledges the new files
                 AssetDatabase.Refresh();
-                Debug.Log($"[Package Sample] Successfully auto-imported streaming assets to: {destPath}");
+                Debug.Log($"[Package Sample] Successfully auto-imported {copiedCount} streaming asset(s) to: {destPath}");
             }
         }
 
-        private static void CopyFilesRecursively(string sourceDir, string targetDir)
+        private static int CopyMissingFilesRecursively(string sourceDir, string targetDir)
         {
-            foreach (string dirPath in Directory.GetDirectories(sourceDir, "*", SearchOption.AllDirectories))
-            {
-                Directory.CreateDirectory(dirPath.Replace(sourceDir, targetDir));
-            }
+            int copiedCount = 0;
 
             foreach (string newPath in Directory.GetFiles(sourceDir, "*.*", SearchOption.AllDirectories))
             {
                 // Skip any accidental meta files in the source folder
                 if (newPath.EndsWith(".meta")) continue;
 
-                File.Copy(newPath, newPath.Replace(sourceDir, targetDir), true);
+                string targetPath = newPath.Replace(sourceDir, targetDir);
+                if (File.Exists(targetPath)) continue;
+
+                Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+                File.Copy(newPath, targetPath);
+                copiedCount++;
             }
+
+            return copiedCount;
         }
     }
 

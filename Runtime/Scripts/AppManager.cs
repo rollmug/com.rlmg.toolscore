@@ -70,7 +70,8 @@ namespace rlmg.Tools.Core
     public class AppManager : SingletonDoNotDestroy<AppManager>
     {
         /// <summary>
-        /// An empty list will do no override from what's set in the inspector.
+        /// An empty list will not override from what's set in the inspector.
+        /// The first item in the displaysData list will be used as the primary screen's resolution.
         /// </summary>
         [Tooltip("An empty list will not override what's set in the Editor. The first item in the displaysData list will be used as the primary screen's resolution.")]
         [SerializeField]
@@ -96,13 +97,46 @@ namespace rlmg.Tools.Core
         protected int targetFrameRate = 60;
 
         /// <summary>
-        /// Logs app start and invokes Setup methods
+        /// If true, display and frequency setup is deferred from Start until Configure is called.
+        /// </summary>
+        [Tooltip("If true, display and frequency setup is deferred from Start until Configure is called.")]
+        [SerializeField]
+        protected bool doWaitForConfigToInit = false;
+
+        /// <summary>
+        /// Managed by this class so Initialize only runs once per instance; Configure calls made
+        /// afterward re-apply setup instead.
+        /// </summary>
+        private bool isInitialized = false;
+
+        /// <summary>
+        /// Whether Start should invoke Initialize. When waiting for config, initialization is deferred
+        /// to <see cref="Configure"/>.
+        /// </summary>
+        protected virtual bool DoInitializeOnStart => !doWaitForConfigToInit;
+
+        /// <summary>
+        /// Logs app start and invokes Initialize, unless DoInitializeOnStart is false
         /// </summary>
         protected virtual void Start()
         {
             RLMGLogger.Log("Application Awake - version #" + Application.version);
 
             Cursor.visible = Application.isEditor;
+
+            if (DoInitializeOnStart)
+                Initialize();
+        }
+
+        /// <summary>
+        /// Invokes Setup methods once; subsequent calls are no-ops.
+        /// </summary>
+        protected void Initialize()
+        {
+            if (isInitialized)
+                return;
+
+            isInitialized = true;
 
             SetupDisplays();
             SetupFrequency();
@@ -113,6 +147,9 @@ namespace rlmg.Tools.Core
         /// </summary>
         protected virtual void Update()
         {
+            if (Keyboard.current == null)
+                return;
+
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
                 Application.Quit();
 
@@ -123,8 +160,10 @@ namespace rlmg.Tools.Core
         /// <summary>
         /// Logs app exit
         /// </summary>
-        protected virtual void OnApplicationQuit()
+        protected override void OnApplicationQuit()
         {
+            base.OnApplicationQuit();
+
             RLMGLogger.Log(
                 string.Format(
                     "Application Quit at {0:MM / dd / yy H: mm:ss zzz}",
@@ -134,7 +173,8 @@ namespace rlmg.Tools.Core
         }
 
         /// <summary>
-        /// Apply configuration settings
+        /// Apply configuration settings. Initializes if waiting for config to do so; if already
+        /// initialized, re-applies display and frequency setup so the new settings take effect.
         /// </summary>
         /// <param name="data"></param>
         public virtual void Configure(AppManagerConfigurationData data)
@@ -153,6 +193,98 @@ namespace rlmg.Tools.Core
 
             if (data.targetFrameRate != null)
                 targetFrameRate = (int)data.targetFrameRate;
+
+            if (isInitialized)
+            {
+                SetupDisplays();
+                SetupFrequency();
+            }
+            else if (doWaitForConfigToInit)
+            {
+                Initialize();
+            }
+        }
+
+        /// <summary>
+        /// The complement to <see cref="Configure"/>: configuration data holding this instance's current settings.
+        /// </summary>
+        public virtual AppManagerConfigurationData GetCurrentConfigurationData()
+        {
+            return new AppManagerConfigurationData
+            {
+                displaysData = displaysData,
+                doDebugLogSetup = doDebugLogSetup,
+                vSyncCount = vSyncCount,
+                targetFrameRate = targetFrameRate,
+            };
+        }
+
+        /// <summary>
+        /// Activates the display at displayIndex (0-based, as in Display.displays), applying its
+        /// displaysData entry's dimensions if one exists; otherwise the display keeps its native
+        /// resolution. Logs a warning and does nothing if no such display is connected.
+        /// </summary>
+        /// <param name="displayIndex"></param>
+        public virtual void ActivateDisplay(int displayIndex)
+        {
+            if (displayIndex < 0 ||
+                displayIndex >= Display.displays.Length)
+            {
+                if (Application.isEditor)
+                {
+                    if (doDebugLogSetup)
+                        RLMGLogger.Log(
+                            string.Format(
+                                "Skipping activation of display {0} in the Editor; use a Game view targeting it instead.",
+                                displayIndex + 1
+                                ));
+                    return;
+                }
+
+                RLMGLogger.LogWarning(
+                    string.Format(
+                        "Can't activate display {0}: only {1} display(s) connected.",
+                        displayIndex + 1,
+                        Display.displays.Length
+                        ));
+                return;
+            }
+
+            // Display.displays[0] is always ON so no need to Activate
+            if (displayIndex == 0)
+                return;
+
+            Display display = Display.displays[displayIndex];
+
+            if (!display.active)
+                display.Activate();
+
+            DisplayData data = displaysData != null && displayIndex < displaysData.Length ?
+                displaysData[displayIndex] :
+                null;
+
+            if (data != null)
+            {
+                data.dimensions.x = Math.Max(data.dimensions.x, 10);
+                data.dimensions.y = Math.Max(data.dimensions.y, 10);
+
+                display.SetParams(
+                    data.dimensions.x,
+                    data.dimensions.y,
+                    0,
+                    0);
+            }
+
+            if (doDebugLogSetup)
+                RLMGLogger.Log(
+                    string.Format(
+                        "Activated display {0}.\nRendering Res: {1} x {2}\nSystem Res: {3} x {4}",
+                        displayIndex + 1,
+                        display.renderingWidth,
+                        display.renderingHeight,
+                        display.systemWidth,
+                        display.systemHeight
+                        ));
         }
 
         /// <summary>
@@ -160,7 +292,8 @@ namespace rlmg.Tools.Core
         /// </summary>
         protected virtual void SetupDisplays()
         {
-            if (displaysData.Length == 0)
+            if (displaysData == null ||
+                displaysData.Length == 0)
                 return;
 
             if (doDebugLogSetup)
@@ -182,38 +315,15 @@ namespace rlmg.Tools.Core
 
             // Display.displaysData[0] is always ON so no need to Activate
 
-            // Set up other _displaysData
-            if (Display.displays.Length > 1 &&
-                displaysData.Length > 1)
+            // Set up other displaysData, for displays that are connected
+            int setupCount = Math.Min(displaysData.Length, Display.displays.Length);
+
+            for (int i = 1; i < setupCount; i++)
             {
-                for (int i = 1; i < displaysData.Length; i++)
-                {
-                    DisplayData data = displaysData[i];
+                if (displaysData[i] == null)
+                    continue;
 
-                    if (data == null)
-                        continue;
-
-                    data.dimensions.x = Math.Max(data.dimensions.x, 10);
-                    data.dimensions.y = Math.Max(data.dimensions.y, 10);
-
-                    Display.displays[i].Activate();
-                    Display.displays[i].SetParams(
-                        data.dimensions.x,
-                        data.dimensions.y,
-                        0,
-                        0);
-
-                    if (doDebugLogSetup)
-                        RLMGLogger.Log(
-                            string.Format(
-                                "Activated display {0}.\nRendering Res: {1} x {2}\nSystem Res: {3} x {4}",
-                                i + 1,
-                                Display.displays[i].renderingWidth,
-                                Display.displays[i].renderingHeight,
-                                Display.displays[i].systemWidth,
-                                Display.displays[i].systemHeight
-                                ));                
-                }
+                ActivateDisplay(i);
             }
         }
 
