@@ -90,9 +90,11 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_r_l_m
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">rlmg.Tools.Core.RLMGConfigLoader Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +109,12 @@ Inheritance diagram for rlmg.Tools.Core.RLMGConfigLoader:</div>
   <img src="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a73755427ec2242e1b6c0eab63d9a8833"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a73755427ec2242e1b6c0eab63d9a8833">SaveCurrentConfigToDisk</a> ()</td></tr>
+<tr class="memdesc:a73755427ec2242e1b6c0eab63d9a8833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the current settings of the components this configures out to the config file (see localContentPath) - the complement to loading it.  <br /></td></tr>
+<tr class="separator:a73755427ec2242e1b6c0eab63d9a8833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aada48d726a34e536a9f4c2a81825df31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#aada48d726a34e536a9f4c2a81825df31">Data</a></td></tr>
@@ -117,20 +125,38 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3619a2437d4e8329481affe5241621a9"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a3619a2437d4e8329481affe5241621a9">Awake</a> ()</td></tr>
 <tr class="separator:a3619a2437d4e8329481affe5241621a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb0b20112a6a3ddec9450ce5d3f08f8"><td class="memItemLeft" align="right" valign="top">override IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a0eb0b20112a6a3ddec9450ce5d3f08f8">MainLoadContent</a> ()</td></tr>
+<tr class="memdesc:a0eb0b20112a6a3ddec9450ce5d3f08f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds clearing of loaded data every time loading is run.  <br /></td></tr>
+<tr class="separator:a0eb0b20112a6a3ddec9450ce5d3f08f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e6e5f4ec290bac6a2d84b27bda145e"><td class="memItemLeft" align="right" valign="top">override IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a04e6e5f4ec290bac6a2d84b27bda145e">OnLocalSuccess</a> (UnityWebRequest webRequest)</td></tr>
-<tr class="memdesc:a04e6e5f4ec290bac6a2d84b27bda145e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up our most frequently used components.  <br /></td></tr>
+<tr class="memdesc:a04e6e5f4ec290bac6a2d84b27bda145e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the config and, with good data, sets up our most frequently used components.  <br /></td></tr>
 <tr class="separator:a04e6e5f4ec290bac6a2d84b27bda145e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73249b7663fe8db06e0fbbcf4fbd961a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a73249b7663fe8db06e0fbbcf4fbd961a">TryParseLoadedConfig</a> (string text, out <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a> data, out string message)</td></tr>
+<tr class="memdesc:a73249b7663fe8db06e0fbbcf4fbd961a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses loaded config file text as RLMGConfigData.  <br /></td></tr>
+<tr class="separator:a73249b7663fe8db06e0fbbcf4fbd961a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45da3a990564728c670b03ac3977ad27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a45da3a990564728c670b03ac3977ad27">TryParseConfig&lt; T &gt;</a> (string text, out T data, out string message)</td></tr>
+<tr class="memdesc:a45da3a990564728c670b03ac3977ad27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses config file text as <em>T</em>  (via Newtonsoft, to support nullable types).  <br /></td></tr>
+<tr class="separator:a45da3a990564728c670b03ac3977ad27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0836ecd7900786dee58f63dfe201948"><td class="memItemLeft" align="right" valign="top">override IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ab0836ecd7900786dee58f63dfe201948">OnLocalFailure</a> (string error, string url)</td></tr>
+<tr class="memdesc:ab0836ecd7900786dee58f63dfe201948"><td class="mdescLeft">&#160;</td><td class="mdescRight">The config file is optional - if it doesn't exist, the components keep their Inspector settings and nothing is logged.  <br /></td></tr>
+<tr class="separator:ab0836ecd7900786dee58f63dfe201948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73a0a1b005148e39ad049a4ce7e4e92"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#af73a0a1b005148e39ad049a4ce7e4e92">GetCurrentConfigData</a> ()</td></tr>
+<tr class="memdesc:af73a0a1b005148e39ad049a4ce7e4e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config data reflecting the current settings of the components this configures.  <br /></td></tr>
+<tr class="separator:af73a0a1b005148e39ad049a4ce7e4e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ffd500b34c8df32b0c2a3dd9ce29dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ac6ffd500b34c8df32b0c2a3dd9ce29dd">PopulateConfigData</a> (<a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a> data)</td></tr>
+<tr class="memdesc:ac6ffd500b34c8df32b0c2a3dd9ce29dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets every RLMGConfigData field from the current settings of the components this configures.  <br /></td></tr>
+<tr class="separator:ac6ffd500b34c8df32b0c2a3dd9ce29dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38dcf0da2120122a1ff3cbc3220ca47"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ab38dcf0da2120122a1ff3cbc3220ca47">ApplyConfigData</a> (<a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a> data)</td></tr>
 <tr class="memdesc:ab38dcf0da2120122a1ff3cbc3220ca47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies loaded config data to the logger, attract and app manager components in RLMG Core.  <br /></td></tr>
 <tr class="separator:ab38dcf0da2120122a1ff3cbc3220ca47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:add2c545dc9af4e26c82836b1bbdd9428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_app_manager.html">AppManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#add2c545dc9af4e26c82836b1bbdd9428">appManager</a></td></tr>
-<tr class="memdesc:add2c545dc9af4e26c82836b1bbdd9428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally present AppManager instance, which this will configure.  <br /></td></tr>
-<tr class="separator:add2c545dc9af4e26c82836b1bbdd9428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a997a7b6eb1d24f7b7d4c2efb300903"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a8a997a7b6eb1d24f7b7d4c2efb300903">doAutoFindAppManager</a> = true</td></tr>
-<tr class="separator:a8a997a7b6eb1d24f7b7d4c2efb300903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908a0e24c381d067702d32a404e84e47"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a908a0e24c381d067702d32a404e84e47">configSubdirectoryName</a> = &quot;config&quot;</td></tr>
+<tr class="memdesc:a908a0e24c381d067702d32a404e84e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional subdirectory of LocalContentDirectory that the config file (contentFileName) is resolved from.  <br /></td></tr>
+<tr class="separator:a908a0e24c381d067702d32a404e84e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74fe5dbb06f275425a96f81a7698680"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ab74fe5dbb06f275425a96f81a7698680">doConfigureAppManager</a> = true</td></tr>
+<tr class="separator:ab74fe5dbb06f275425a96f81a7698680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4a6c7f913e879d5f3e61943e590973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html">AttractVideoPlayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a6d4a6c7f913e879d5f3e61943e590973">attractVideoPlayer</a></td></tr>
 <tr class="memdesc:a6d4a6c7f913e879d5f3e61943e590973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally present AttractVideoPlayer instance, which this will configure.  <br /></td></tr>
 <tr class="separator:a6d4a6c7f913e879d5f3e61943e590973"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,6 +167,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aab16fe5bda9e6cdc43c702230663df0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7562016bf21c8317f4116cdb6408ca7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ae7562016bf21c8317f4116cdb6408ca7">doAutoFindAttractTimeouts</a> = true</td></tr>
 <tr class="separator:ae7562016bf21c8317f4116cdb6408ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:ab11a1cfb4bb5b0531661f86b338b2669"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ab11a1cfb4bb5b0531661f86b338b2669">ConfigSubdirectoryName</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab11a1cfb4bb5b0531661f86b338b2669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the optional subdirectory of LocalContentDirectory that the config file is resolved from.  <br /></td></tr>
+<tr class="separator:ab11a1cfb4bb5b0531661f86b338b2669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74baa9840ebecbc675d6fc9b17e80f38"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a74baa9840ebecbc675d6fc9b17e80f38">localContentPath</a><code> [get]</code></td></tr>
+<tr class="memdesc:a74baa9840ebecbc675d6fc9b17e80f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the config file: LocalContentDirectory, plus configSubdirectoryName if set, plus contentFileName.  <br /></td></tr>
+<tr class="separator:a74baa9840ebecbc675d6fc9b17e80f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Configures the logger, attract and app manager components in RLMG Core. </p>
@@ -199,6 +234,101 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af73a0a1b005148e39ad049a4ce7e4e92" name="af73a0a1b005148e39ad049a4ce7e4e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73a0a1b005148e39ad049a4ce7e4e92">&#9670;&#160;</a></span>GetCurrentConfigData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a> rlmg.Tools.Core.RLMGConfigLoader.GetCurrentConfigData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Config data reflecting the current settings of the components this configures. </p>
+<p>Override to return an RLMGConfigData subclass, populated via PopulateConfigData. </p>
+
+</div>
+</div>
+<a id="a0eb0b20112a6a3ddec9450ce5d3f08f8" name="a0eb0b20112a6a3ddec9450ce5d3f08f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb0b20112a6a3ddec9450ce5d3f08f8">&#9670;&#160;</a></span>MainLoadContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IEnumerator rlmg.Tools.Core.RLMGConfigLoader.MainLoadContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds clearing of loaded data every time loading is run. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab0836ecd7900786dee58f63dfe201948" name="ab0836ecd7900786dee58f63dfe201948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0836ecd7900786dee58f63dfe201948">&#9670;&#160;</a></span>OnLocalFailure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IEnumerator rlmg.Tools.Core.RLMGConfigLoader.OnLocalFailure </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>error</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The config file is optional - if it doesn't exist, the components keep their Inspector settings and nothing is logged. </p>
+<p>A file that exists but fails to load is still logged as an error. </p>
+
+</div>
+</div>
 <a id="a04e6e5f4ec290bac6a2d84b27bda145e" name="a04e6e5f4ec290bac6a2d84b27bda145e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04e6e5f4ec290bac6a2d84b27bda145e">&#9670;&#160;</a></span>OnLocalSuccess()</h2>
 
@@ -223,8 +353,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set up our most frequently used components. </p>
-<p>The base method does nothing.</p>
+<p>Parses the config and, with good data, sets up our most frequently used components. </p>
+<p>If it's blank or fails to parse, logs an error and the load reports Failed (and AnyLoadFailed fires) - logged rather than thrown, so loading still finishes. The file itself is left as-is.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">webRequest</td><td></td></tr>
@@ -235,9 +365,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="add2c545dc9af4e26c82836b1bbdd9428" name="add2c545dc9af4e26c82836b1bbdd9428"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add2c545dc9af4e26c82836b1bbdd9428">&#9670;&#160;</a></span>appManager</h2>
+<a id="ac6ffd500b34c8df32b0c2a3dd9ce29dd" name="ac6ffd500b34c8df32b0c2a3dd9ce29dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ffd500b34c8df32b0c2a3dd9ce29dd">&#9670;&#160;</a></span>PopulateConfigData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +375,11 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_app_manager.html">AppManager</a> rlmg.Tools.Core.RLMGConfigLoader.appManager</td>
+          <td class="memname">void rlmg.Tools.Core.RLMGConfigLoader.PopulateConfigData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a>&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -256,10 +389,138 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Optionally present AppManager instance, which this will configure. </p>
+<p>Sets every RLMGConfigData field from the current settings of the components this configures. </p>
+<p>Values with no live source (e.g. no AppManager instance, or the attract path, which isn't stored after it's loaded) are taken from the last loaded Data, if any. </p>
 
 </div>
 </div>
+<a id="a73755427ec2242e1b6c0eab63d9a8833" name="a73755427ec2242e1b6c0eab63d9a8833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73755427ec2242e1b6c0eab63d9a8833">&#9670;&#160;</a></span>SaveCurrentConfigToDisk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool rlmg.Tools.Core.RLMGConfigLoader.SaveCurrentConfigToDisk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the current settings of the components this configures out to the config file (see localContentPath) - the complement to loading it. </p>
+<p>Returns whether the file was written. </p>
+
+</div>
+</div>
+<a id="a45da3a990564728c670b03ac3977ad27" name="a45da3a990564728c670b03ac3977ad27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45da3a990564728c670b03ac3977ad27">&#9670;&#160;</a></span>TryParseConfig&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rlmg.Tools.Core.RLMGConfigLoader.TryParseConfig&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out T&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses config file text as <em>T</em>  (via Newtonsoft, to support nullable types). </p>
+<p>Returns false, with <em>message</em>  describing why, if it's blank or fails to parse. </p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>RLMGConfigData</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a73249b7663fe8db06e0fbbcf4fbd961a" name="a73249b7663fe8db06e0fbbcf4fbd961a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73249b7663fe8db06e0fbbcf4fbd961a">&#9670;&#160;</a></span>TryParseLoadedConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool rlmg.Tools.Core.RLMGConfigLoader.TryParseLoadedConfig </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html">RLMGConfigData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses loaded config file text as RLMGConfigData. </p>
+<p>Override to parse as a subclass, via TryParseConfig. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="aab16fe5bda9e6cdc43c702230663df0a" name="aab16fe5bda9e6cdc43c702230663df0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab16fe5bda9e6cdc43c702230663df0a">&#9670;&#160;</a></span>attractTimeouts</h2>
 
@@ -308,6 +569,31 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a908a0e24c381d067702d32a404e84e47" name="a908a0e24c381d067702d32a404e84e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908a0e24c381d067702d32a404e84e47">&#9670;&#160;</a></span>configSubdirectoryName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string rlmg.Tools.Core.RLMGConfigLoader.configSubdirectoryName = &quot;config&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional subdirectory of LocalContentDirectory that the config file (contentFileName) is resolved from. </p>
+<p>Blank = LocalContentDirectory itself. </p>
+
+</div>
+</div>
 <a id="aada48d726a34e536a9f4c2a81825df31" name="aada48d726a34e536a9f4c2a81825df31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aada48d726a34e536a9f4c2a81825df31">&#9670;&#160;</a></span>Data</h2>
 
@@ -321,28 +607,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The configuration data loaded. </p>
-
-</div>
-</div>
-<a id="a8a997a7b6eb1d24f7b7d4c2efb300903" name="a8a997a7b6eb1d24f7b7d4c2efb300903"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a997a7b6eb1d24f7b7d4c2efb300903">&#9670;&#160;</a></span>doAutoFindAppManager</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rlmg.Tools.Core.RLMGConfigLoader.doAutoFindAppManager = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -390,6 +654,78 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab74fe5dbb06f275425a96f81a7698680" name="ab74fe5dbb06f275425a96f81a7698680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74fe5dbb06f275425a96f81a7698680">&#9670;&#160;</a></span>doConfigureAppManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rlmg.Tools.Core.RLMGConfigLoader.doConfigureAppManager = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ab11a1cfb4bb5b0531661f86b338b2669" name="ab11a1cfb4bb5b0531661f86b338b2669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11a1cfb4bb5b0531661f86b338b2669">&#9670;&#160;</a></span>ConfigSubdirectoryName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string rlmg.Tools.Core.RLMGConfigLoader.ConfigSubdirectoryName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name of the optional subdirectory of LocalContentDirectory that the config file is resolved from. </p>
+<p>See configSubdirectoryName. </p>
+
+</div>
+</div>
+<a id="a74baa9840ebecbc675d6fc9b17e80f38" name="a74baa9840ebecbc675d6fc9b17e80f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74baa9840ebecbc675d6fc9b17e80f38">&#9670;&#160;</a></span>localContentPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string rlmg.Tools.Core.RLMGConfigLoader.localContentPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path to the config file: LocalContentDirectory, plus configSubdirectoryName if set, plus contentFileName. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Runtime/Scripts/<a class="el" href="_r_l_m_g_config_loader_8cs.html">RLMGConfigLoader.cs</a></li>
 </ul>
@@ -399,7 +735,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html">RLMGConfigLoader</a></li>
-    <li class="footer">Generated on Fri Oct 16 2026 16:13:25 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Mon Nov 2 2026 16:12:20 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

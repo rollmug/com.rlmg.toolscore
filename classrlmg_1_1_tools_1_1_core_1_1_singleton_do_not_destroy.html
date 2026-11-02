@@ -90,8 +90,8 @@ $(document).ready(function(){initNavTree('classrlmg_1_1_tools_1_1_core_1_1_singl
 
 <div class="header">
   <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">rlmg.Tools.Core.SingletonDoNotDestroy&lt; T &gt; Class Template Reference</div></div>
@@ -107,6 +107,11 @@ Inheritance diagram for rlmg.Tools.Core.SingletonDoNotDestroy&lt; T &gt;:</div>
   <img src="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7c6902bd651223ec060eb6781f424f2d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a7c6902bd651223ec060eb6781f424f2d">HasInstance</a> ()</td></tr>
+<tr class="separator:a7c6902bd651223ec060eb6781f424f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aaad894033509d4095aabdcc16625bee1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#aaad894033509d4095aabdcc16625bee1">Awake</a> ()</td></tr>
@@ -114,11 +119,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6fb5974e1dcb0b1723f8f9d438323092"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a6fb5974e1dcb0b1723f8f9d438323092">OnApplicationQuit</a> ()</td></tr>
 <tr class="memdesc:a6fb5974e1dcb0b1723f8f9d438323092"><td class="mdescLeft">&#160;</td><td class="mdescRight">When Unity quits, it destroys objects in a random order.  <br /></td></tr>
 <tr class="separator:a6fb5974e1dcb0b1723f8f9d438323092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a1597da07b77d208335a79bcc50f60af6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a1597da07b77d208335a79bcc50f60af6">applicationIsQuitting</a> = false</td></tr>
-<tr class="separator:a1597da07b77d208335a79bcc50f60af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -164,6 +164,31 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c6902bd651223ec060eb6781f424f2d" name="a7c6902bd651223ec060eb6781f424f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6902bd651223ec060eb6781f424f2d">&#9670;&#160;</a></span>HasInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy</a>&lt; T &gt;.HasInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6fb5974e1dcb0b1723f8f9d438323092" name="a6fb5974e1dcb0b1723f8f9d438323092"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6fb5974e1dcb0b1723f8f9d438323092">&#9670;&#160;</a></span>OnApplicationQuit()</h2>
 
@@ -188,32 +213,9 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>When Unity quits, it destroys objects in a random order. </p>
-<p>In principle, a Singleton is only destroyed when application quits. If any script calls Instance after it have been destroyed, it will create a buggy ghost object that will stay on the Editor scene even after stopping playing the Application. Really bad! So, this was made to be sure we're not creating that buggy ghost object. </p>
+<p>In principle, a Singleton is only destroyed when application quits. If any script calls Instance after it have been destroyed, it will create a buggy ghost object that will stay on the Editor scene even after stopping playing the Application. Really bad! So, this was made to be sure we're not creating that buggy ghost object. In the Editor, AppQuitCheck has already set the flag by now; this covers builds. </p>
 
-<p>Reimplemented in <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a5f6f4e8131b2c7b2e6a3d1a68273d1ca">rlmg.Tools.Core.AppManager</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1597da07b77d208335a79bcc50f60af6" name="a1597da07b77d208335a79bcc50f60af6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1597da07b77d208335a79bcc50f60af6">&#9670;&#160;</a></span>applicationIsQuitting</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">rlmg.Tools.Core.SingletonDoNotDestroy</a>&lt; T &gt;.applicationIsQuitting = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reimplemented in <a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a264776a13f78a9d4e32d1a881d9181f8">rlmg.Tools.Core.AppManager</a>.</p>
 
 </div>
 </div>
@@ -249,7 +251,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacerlmg.html">rlmg</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools.html">Tools</a></li><li class="navelem"><a class="el" href="namespacerlmg_1_1_tools_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html">SingletonDoNotDestroy</a></li>
-    <li class="footer">Generated on Fri Oct 16 2026 16:13:25 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Mon Nov 2 2026 16:12:20 for RLMG Tools - Core by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

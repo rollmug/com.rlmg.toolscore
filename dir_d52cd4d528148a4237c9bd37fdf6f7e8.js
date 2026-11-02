@@ -1,6 +1,7 @@
 var dir_d52cd4d528148a4237c9bd37fdf6f7e8 =
 [
     [ "AppManager.cs", "_app_manager_8cs.html", "_app_manager_8cs" ],
+    [ "AppQuitCheck.cs", "_app_quit_check_8cs.html", null ],
     [ "AttractTimeout.cs", "_attract_timeout_8cs.html", "_attract_timeout_8cs" ],
     [ "AttractVideoPlayer.cs", "_attract_video_player_8cs.html", "_attract_video_player_8cs" ],
     [ "RLMGConfigData.cs", "_r_l_m_g_config_data_8cs.html", "_r_l_m_g_config_data_8cs" ],

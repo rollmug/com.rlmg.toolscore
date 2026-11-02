@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['anyclick_0',['anyClick',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#aa9e676645d22b9889215a8e6330c07ee',1,'rlmg::Tools::Core::AttractTimeout']]],
-  ['application_1',['Application',['../namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893ae498749f3c42246d50b15c81c101d988',1,'rlmg::Tools::Core']]],
-  ['applicationisquitting_2',['applicationIsQuitting',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#a1597da07b77d208335a79bcc50f60af6',1,'rlmg::Tools::Core::SingletonDoNotDestroy']]],
+  ['activatedisplay_0',['ActivateDisplay',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#acf61a1400275f201d69bbdefef12eafc',1,'rlmg::Tools::Core::AppManager']]],
+  ['anyclick_1',['anyClick',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#aa9e676645d22b9889215a8e6330c07ee',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['application_2',['Application',['../namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893ae498749f3c42246d50b15c81c101d988',1,'rlmg::Tools::Core']]],
   ['applyconfigdata_3',['ApplyConfigData',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#ab38dcf0da2120122a1ff3cbc3220ca47',1,'rlmg::Tools::Core::RLMGConfigLoader']]],
-  ['appmanager_4',['appManager',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#add2c545dc9af4e26c82836b1bbdd9428',1,'rlmg::Tools::Core::RLMGConfigLoader']]],
-  ['appmanager_5',['AppManager',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html',1,'rlmg::Tools::Core']]],
-  ['appmanager_2ecs_6',['AppManager.cs',['../_app_manager_8cs.html',1,'']]],
-  ['appmanagerconfig_7',['appManagerConfig',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html#a551e430a701d778739cd16c229e5eb46',1,'rlmg::Tools::Core::RLMGConfigData']]],
-  ['appmanagerconfigurationdata_8',['AppManagerConfigurationData',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager_configuration_data.html',1,'rlmg::Tools::Core']]],
+  ['appmanager_4',['AppManager',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html',1,'rlmg::Tools::Core']]],
+  ['appmanager_2ecs_5',['AppManager.cs',['../_app_manager_8cs.html',1,'']]],
+  ['appmanagerconfig_6',['appManagerConfig',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html#a551e430a701d778739cd16c229e5eb46',1,'rlmg::Tools::Core::RLMGConfigData']]],
+  ['appmanagerconfigurationdata_7',['AppManagerConfigurationData',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager_configuration_data.html',1,'rlmg::Tools::Core']]],
+  ['appquitcheck_2ecs_8',['AppQuitCheck.cs',['../_app_quit_check_8cs.html',1,'']]],
   ['attractcanvasgroup_9',['attractCanvasGroup',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#aa90aa73dd12df4caf763df48bb8fc530',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
   ['attractdismissed_10',['AttractDismissed',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#af49948f2f4c9a39ec6fc4fc0957de23d',1,'rlmg::Tools::Core::AttractTimeout']]],
   ['attractfadeincompleted_11',['AttractFadeInCompleted',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#ad64ab367c6a35517be8683904d86726e',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
@@ -26,5 +26,5 @@ var searchData=
   ['attractvideoplayer_23',['attractVideoPlayer',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a6d4a6c7f913e879d5f3e61943e590973',1,'rlmg::Tools::Core::RLMGConfigLoader']]],
   ['attractvideoplayer_24',['AttractVideoPlayer',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html',1,'rlmg::Tools::Core']]],
   ['attractvideoplayer_2ecs_25',['AttractVideoPlayer.cs',['../_attract_video_player_8cs.html',1,'']]],
-  ['awake_26',['Awake',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a9a4cdb49611cf2058580ffbb5b9c07ee',1,'rlmg.Tools.Core.AttractVideoPlayer.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a3619a2437d4e8329481affe5241621a9',1,'rlmg.Tools.Core.RLMGConfigLoader.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a955906bd5f9da57df4d5bef73c54a08a',1,'rlmg.Tools.Core.RLMGLogger.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#aaad894033509d4095aabdcc16625bee1',1,'rlmg.Tools.Core.SingletonDoNotDestroy.Awake()']]]
+  ['awake_26',['Awake',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a9a4cdb49611cf2058580ffbb5b9c07ee',1,'rlmg.Tools.Core.AttractVideoPlayer.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html#a3619a2437d4e8329481affe5241621a9',1,'rlmg.Tools.Core.RLMGConfigLoader.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a955906bd5f9da57df4d5bef73c54a08a',1,'rlmg.Tools.Core.RLMGLogger.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton.html#aa486ef5ae861ebec59b583639ab84314',1,'rlmg.Tools.Core.Singleton.Awake()'],['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html#aaad894033509d4095aabdcc16625bee1',1,'rlmg.Tools.Core.SingletonDoNotDestroy.Awake()']]]
 ];

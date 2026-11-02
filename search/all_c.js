@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['savedvideovolume_0',['savedVideoVolume',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a4b944abd5b38f40c2300cceae7d49149',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
-  ['setlogfolderpath_1',['SetLogFolderPath',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a23c3679c4ff04177eaeca6dccd53e0dc',1,'rlmg::Tools::Core::RLMGLogger']]],
-  ['setup_2',['Setup',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2def077f1b9e727fab6e1d2bb028ec83',1,'rlmg::Tools::Core::RLMGLogger']]],
-  ['setupdisplays_3',['SetupDisplays',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a7d1b9c7f2412baf5cf9ffe102fb1cd9c',1,'rlmg::Tools::Core::AppManager']]],
-  ['setupfrequency_4',['SetupFrequency',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a2724ac23fe2fa38ef5b328fe8aedb2c4',1,'rlmg::Tools::Core::AppManager']]],
-  ['setvideovolume_5',['SetVideoVolume',['../classrlmg_1_1_tools_1_1_core_1_1_attract_video_player.html#a9a89fe0a8b9ba5c3c03613e9522ddbbd',1,'rlmg::Tools::Core::AttractVideoPlayer']]],
-  ['singleton_6',['Singleton',['../classrlmg_1_1_tools_1_1_core_1_1_singleton.html',1,'rlmg::Tools::Core']]],
-  ['singleton_2ecs_7',['Singleton.cs',['../_singleton_8cs.html',1,'']]],
-  ['singletondonotdestroy_8',['SingletonDoNotDestroy',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
-  ['singletondonotdestroy_2ecs_9',['SingletonDoNotDestroy.cs',['../_singleton_do_not_destroy_8cs.html',1,'']]],
-  ['singletondonotdestroy_3c_20appmanager_20_3e_10',['SingletonDoNotDestroy&lt; AppManager &gt;',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
-  ['singletondonotdestroy_3c_20rlmglogger_20_3e_11',['SingletonDoNotDestroy&lt; RLMGLogger &gt;',['../classrlmg_1_1_tools_1_1_core_1_1_singleton_do_not_destroy.html',1,'rlmg::Tools::Core']]],
-  ['start_12',['Start',['../classrlmg_1_1_tools_1_1_core_1_1_app_manager.html#a799eead6bbb501134862222b899f8e65',1,'rlmg::Tools::Core::AppManager']]],
-  ['streamingassets_13',['StreamingAssets',['../namespacerlmg_1_1_tools_1_1_core.html#a8b6a479a2fa7c8f466cf7fc99c849893a0b38d14680695e16fe6e41b1959921d0',1,'rlmg::Tools::Core']]]
+  ['core_0',['Core',['../namespacerlmg_1_1_tools_1_1_core.html',1,'rlmg::Tools']]],
+  ['resettimer_1',['ResetTimer',['../classrlmg_1_1_tools_1_1_core_1_1_attract_timeout.html#a7cda293c7819437166d3c916ac25ad44',1,'rlmg::Tools::Core::AttractTimeout']]],
+  ['rlmg_2',['rlmg',['../namespacerlmg.html',1,'']]],
+  ['rlmgconfigdata_3',['RLMGConfigData',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_data.html',1,'rlmg::Tools::Core']]],
+  ['rlmgconfigdata_2ecs_4',['RLMGConfigData.cs',['../_r_l_m_g_config_data_8cs.html',1,'']]],
+  ['rlmgconfigloader_5',['RLMGConfigLoader',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_config_loader.html',1,'rlmg::Tools::Core']]],
+  ['rlmgconfigloader_2ecs_6',['RLMGConfigLoader.cs',['../_r_l_m_g_config_loader_8cs.html',1,'']]],
+  ['rlmglogger_7',['RLMGLogger',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html',1,'rlmg::Tools::Core']]],
+  ['rlmglogger_2ecs_8',['RLMGLogger.cs',['../_r_l_m_g_logger_8cs.html',1,'']]],
+  ['rlmgloggerconfigurationdata_9',['RLMGLoggerConfigurationData',['../classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html',1,'rlmg::Tools::Core']]],
+  ['tools_10',['Tools',['../namespacerlmg_1_1_tools.html',1,'rlmg']]]
 ];

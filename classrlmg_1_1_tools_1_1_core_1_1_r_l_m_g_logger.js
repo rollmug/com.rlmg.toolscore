@@ -2,6 +2,7 @@ var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger =
 [
     [ "Awake", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a955906bd5f9da57df4d5bef73c54a08a", null ],
     [ "Configure", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ac4d71a00d87be6a1fe0d5ded914b6576", null ],
+    [ "GetCurrentConfigurationData", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a504dbec1d4ccea9db6f876e578c92e0a", null ],
     [ "HandleDebugLog", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a2e319e9285159c3f76d04179c2a0e7fc", null ],
     [ "Initialize", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#ab6200dc35ffacdc6f494d6973f0d3798", null ],
     [ "Log", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a6028b06928c08fe4d8995aacec42b1bb", null ],
@@ -25,6 +26,7 @@ var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger =
     [ "doLogFilePerSession", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a7530ebd46ccbebfb017c9b7ac1985d33", null ],
     [ "doLogToDiskInEditor", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afa54cd6b6728c82c23ac629d257862e0", null ],
     [ "doSkipLoggingDebugLogs", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a345455b8e56ec52630d6b6fec6d90906", null ],
+    [ "doWaitForConfigToInit", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#afadbe95bfebfa7a8f7f26dd675d43133", null ],
     [ "extension", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a8c346ca4f1bcced2fc49209e21ceee28", null ],
     [ "headerLine", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a327add6025956c94109301a5e8efcfef", null ],
     [ "logDelimiter", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a3f2566f2691bb8aa53564b958774857a", null ],

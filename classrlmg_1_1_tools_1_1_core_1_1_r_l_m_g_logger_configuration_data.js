@@ -1,7 +1,7 @@
 var classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data =
 [
-    [ "GetLogDestinationPath", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a58cc1c23726642f1205c0c87cf97dd11", null ],
-    [ "GetLogType", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a1fd6fb2b1af8de57592669b6e1fbd5d8", null ],
+    [ "GetLogDestinationPath", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#af414d97d93bbd63bb0c60d1f798bfa9d", null ],
+    [ "GetLogType", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a99442ceb59434604539112dcdf43b71b", null ],
     [ "debugLogLevel", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a979d769effd44ef75870455d8402cc95", null ],
     [ "debugLogVerbosity", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a3428173624550f9db3c4a17b55a49af8", null ],
     [ "doLogDebugLogs", "classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#aca68e336f7da1adab0b3779022c048d6", null ],

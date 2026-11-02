@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_manager_8cs.html",
-"classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger_configuration_data.html#a2cb736c0b576de6c1584c81bcb01acd8"
+"classrlmg_1_1_tools_1_1_core_1_1_r_l_m_g_logger.html#a8a6f90ca9251ffad7c24cc867cfeea0f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
